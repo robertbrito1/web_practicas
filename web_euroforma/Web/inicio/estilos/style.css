@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003366; /* Azul de fondo */
+    color: #FFD700; /* Amarillo dorado */
+}
+
+/* Contenedor general */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo para el header */
+header {
+    background-color: #00509E; /* Azul más oscuro para el header */
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+header .btn-primary {
+    background-color: #FFD700; /* Botón de color dorado */
+    color: #003366; /* Texto azul oscuro */
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .btn-primary:hover {
+    background-color: #E5C100; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos para la sección de cursos */
+.courses {
+    background-color: #004C8C; /* Azul más oscuro para la sección de cursos */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.course-item {
+    margin-bottom: 30px;
+}
+
+.course-item h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.course-item p {
+    font-size: 1.2em;
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #003366;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1em;
+}

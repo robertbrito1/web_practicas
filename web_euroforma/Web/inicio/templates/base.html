@@ -1,59 +1,81 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FP EUROFORMAC</title>
+    
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="{% static 'inicio/estilos/style.css' %}">
 
-    <tittle> FP EUROFORMAc</tittle>
 
 
-
-
-
-
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
-
-
-
-
+    <header>
+        <div class="container">
+            <h1>Formación Profesional en Tecnología</h1>
+            <p>Adquiere las habilidades que necesitas para sobresalir en el mundo de la tecnología.</p>
+            <a href="#cursos" class="btn-primary">Explorar Cursos</a>
+        </div>
+    </header>
+    <section id="cursos" class="courses">
+        <div class="container">
+            <h2>Cursos Destacados</h2>
+            <div class="course-item">
+                <h3>Desarrollo Web</h3>
+                <p>Aprende a crear sitios web modernos y responsivos.</p>
+            </div>
+            <div class="course-item">
+                <h3>Inteligencia Artificial</h3>
+                <p>Introducción a los conceptos y herramientas de la IA.</p>
+            </div>
+            <div class="course-item">
+                <h3>Redes y Seguridad</h3>
+                <p>Capacitación en redes y protección de sistemas informáticos.</p>
+            </div>
+        </div>
+    </section>
     {% block content %}
     {% endblock %}
-    
-<footer class="footer text-faded text-center py-5">
-  <div class="container">
-      <p class="m-0">
-          <a href="#" class="link">
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-          </a>
-          <a href="#" class="link">
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>   <!--tenemos el pie de pagina aca -->
-              </span>
-          </a>
-          <a href="#" class="link">
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-              </span>
-          </a>
-      </p>
-      <p class="m-0 mbt">
-          <a href="sample.html" class="link">Política de privacidad</a> ·
-          <a href="sample.html" class="link">Aviso legal</a> ·
-          <a href="sample.html" class="link">Cookies</a>
-      </p>
-      <p class="m-0 mbt1">&copy; FPEUROFORMA 2025</p>
-  </div>
-</footer>
+
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+          <p class="m-0">
+              <a href="#" class="link">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+              </a>
+              <a href="#" class="link">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+              </a>
+              <a href="#" class="link">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+              </a>
+          </p>
+          <p class="m-0 mbt">
+              <a href="sample.html" class="link">Política de privacidad</a> ·
+              <a href="sample.html" class="link">Aviso legal</a> ·
+              <a href="sample.html" class="link">Cookies</a>
+          </p>
+          <p class="m-0 mbt1">&copy; FPEUROFORMA 2025</p>
+      </div>
+    </footer>
+
+    {% block scripts %}
+    <!-- Para JS opcional en las plantillas hijas -->
+    {% endblock %}
 
 </body>
-
-
-
-
-
-
 </html>
