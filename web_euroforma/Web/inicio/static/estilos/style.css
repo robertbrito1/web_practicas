@@ -84,3 +84,22 @@ footer {
 footer p {
     font-size: 1em;
 }
+/* Botón flotante */
+.floating-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #FFD700;
+    color: #003366;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+.floating-button:hover {
+    background-color: #e5c100;
+}

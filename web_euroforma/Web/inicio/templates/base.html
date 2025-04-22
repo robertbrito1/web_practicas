@@ -7,7 +7,8 @@
     <title>FP EUROFORMAC</title>
     
     <!-- Archivos CSS -->
-    <link rel="stylesheet" href="{% static 'inicio/estilos/style.css' %}">
+    <link rel="stylesheet" href="{% static 'estilos/style.css' %}">
+    <link rel="stylesheet" href="{% static 'estilos/menu.css' %}">
 
 
 
@@ -22,23 +23,21 @@
             <a href="#cursos" class="btn-primary">Explorar Cursos</a>
         </div>
     </header>
-    <section id="cursos" class="courses">
+    <nav class="navbar">
         <div class="container">
-            <h2>Cursos Destacados</h2>
-            <div class="course-item">
-                <h3>Desarrollo Web</h3>
-                <p>Aprende a crear sitios web modernos y responsivos.</p>
-            </div>
-            <div class="course-item">
-                <h3>Inteligencia Artificial</h3>
-                <p>Introducción a los conceptos y herramientas de la IA.</p>
-            </div>
-            <div class="course-item">
-                <h3>Redes y Seguridad</h3>
-                <p>Capacitación en redes y protección de sistemas informáticos.</p>
-            </div>
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">&#9776;</label>            <!-- esto es la parte superior donde estaran los diferentes botones -->
+          <div class="logo">FP EUROFORMAC</div>                                 <!-- para asi abrir diferentes pestañas -->
+          <ul class="menu">
+            <li><a href="#cursos">RSC</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Nuestro equipo </a></li>
+          </ul>
         </div>
-    </section>
+      </nav>
+      
+    
+    
     {% block content %}
     {% endblock %}
 
@@ -65,9 +64,9 @@
               </a>
           </p>
           <p class="m-0 mbt">
-              <a href="sample.html" class="link">Política de privacidad</a> ·
-              <a href="sample.html" class="link">Aviso legal</a> ·
-              <a href="sample.html" class="link">Cookies</a>
+              <a href="sample.html" class="link" style="color: wheat;">Política de privacidad</a> ·
+              <a href="sample.html" class="link" style="color: wheat;">Aviso legal</a> ·
+              <a href="sample.html" class="link" style="color: wheat;">Cookies</a>
           </p>
           <p class="m-0 mbt1">&copy; FPEUROFORMA 2025</p>
       </div>
@@ -76,6 +75,8 @@
     {% block scripts %}
     <!-- Para JS opcional en las plantillas hijas -->
     {% endblock %}
+    <a href="#contacto" class="floating-button">Contáctanos</a>   <!--boton flotante-->
 
 </body>
+
 </html>
