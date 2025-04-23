@@ -6,3 +6,6 @@ def inicio(request):
 
 def nosotros(request):
     return render(request, 'nosotros.html')
+
+def equipo(request):
+    return render(request, 'equipo.html')

@@ -22,7 +22,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contacto/', include('contacto.urls')),  # Rutas de la app "contacto"
-    path('nosotros/', include('inicio.urls')),   # Rutas de la app "inicio"
+    path('nosotros/', include('inicio.urls')),
+    path('equipo/', include('inicio.urls')),   # Rutas de la app "inicio"
     path('', include('inicio.urls')),           # Página de inicio
 ]
 
