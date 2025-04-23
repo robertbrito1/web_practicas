@@ -9,6 +9,7 @@
     <!-- Archivos CSS -->
     <link rel="stylesheet" href="{% static 'estilos/style.css' %}">
     <link rel="stylesheet" href="{% static 'estilos/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'estilos/contacto.css' %}">
 
 
 
@@ -73,9 +74,9 @@
     </footer>
 
     {% block scripts %}
-    <!-- Para JS opcional en las plantillas hijas -->
+    
     {% endblock %}
-    <a href="#contacto" class="floating-button">Contáctanos</a>   <!--boton flotante-->
+    <a href="{% url 'contacto' %}" class="floating-button {% if request.path == '/contacto/' %}active{% endif %}">Contáctanos</a>
 
 </body>
 

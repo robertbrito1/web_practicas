@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Web',
     'inicio',
+    'contacto',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +60,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / "templates",
+            BASE_DIR / "Web/inicio/templates",
+            BASE_DIR / "Web/contacto/templates",
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -130,3 +133,18 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # ✅ Correcto
+
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS=True                                 # configuracion para el envio de correo a mi cuenta de gmail
+EMAIL_PORT=587
+EMAIL_HOST_USER="britocanha@gmail.com"
+EMAIL_HOST_PASSWORD="gvactwzrylvknjjm"
+EMAIL_USE_TLS = True
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'https://localhost:8000',
+]

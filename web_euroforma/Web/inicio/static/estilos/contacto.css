@@ -1,0 +1,38 @@
+.contenedorformulario {
+    background-color: rgb(209, 184, 40); /* Fondo dorado */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el contenedor */
+    max-width: 600px;
+    margin: 40px auto;
+    color: rgb(23, 78, 180);
+}
+
+.contenedorformulario table {
+    width: 100%;
+    color:rgb(23, 78, 180);
+}
+
+.contenedorformulario input[type="submit"] {
+    background-color: #11558d; /* Color del botón */
+    color: rgb(255, 248, 248); /* Color del texto */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px; /* Tamaño de la fuente más grande */
+    padding: 15px 30px; /* Más espacio interno */
+    border-radius: 8px; /* Bordes redondeados */
+    width: 200px; /* Ancho del botón */
+};
+
+
+.contenedorformulario input[type="submit"]:hover {
+    background-color: #e6b800; /* Color más oscuro al pasar el mouse */
+}
+
+.alert {
+    background-color: #fff8dc; /* Fondo claro para el mensaje */
+    color: #000000;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+}
