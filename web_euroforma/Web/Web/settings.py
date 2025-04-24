@@ -148,3 +148,12 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'https://localhost:8000',
 ]
+
+# === INICIO - Configuración de archivos estáticos ===
+STATIC_URL = '/static/'
+
+import os
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'web_euroforma/Web/inicio/static'),
+]
+# === FIN - Configuración de archivos estáticos ===
