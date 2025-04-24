@@ -1,0 +1,73 @@
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .faq-category {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-category:hover {
+    transform: translateY(-5px);
+  }
+  
+  .faq-category h3 {
+    color: #0053ba;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+  
+  .faq-category ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .faq-category li {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .faq-category strong {
+    color: #000;
+  }
+ 
+  .google-reviews h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #FFD700; /* Color dorado */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Transformar texto a mayúsculas */
+    background: linear-gradient(45deg, #FFD700, #ffcc00); /* Gradiente de color dorado */
+    -webkit-background-clip: text; /* Clip en el texto para mostrar el gradiente */
+    background-clip: text;
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); /* Sombra suave para el efecto 3D */
+    transition: all 0.3s ease;
+    margin: 0 auto; /* Asegura que se centre en el contenedor */
+    width: fit-content; /* Ajusta el tamaño al contenido */
+}
+
+.google-reviews h3:hover {
+  
+    transform: scale(1.1); /* Efecto de ampliación al pasar el cursor */
+    color: #ffcc00; /* Cambio de color al hacer hover */
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5); /* Aumenta la sombra al hacer hover */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
