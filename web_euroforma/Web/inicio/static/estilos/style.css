@@ -103,3 +103,13 @@ footer p {
 .floating-button:hover {
     background-color: #e5c100;
 }
+
+/* === INICIO - Fondo estático de la web === */
+body {
+    background-image: url('/static/estilos/Fondo_Web_Euroformac.jpg');  /* Ruta accesible para Django */
+    background-size: cover;              /* Que cubra toda la pantalla */
+    background-repeat: no-repeat;        /* Que no se repita */
+    background-position: center center;  /* Centrado */
+    background-attachment: fixed;        /* Se mantiene al hacer scroll */
+}
+/* === FIN - Fondo estático de la web === */
