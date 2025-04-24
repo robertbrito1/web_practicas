@@ -1,0 +1,83 @@
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .faq-category {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-category:hover {
+    transform: translateY(-5px);
+  }
+  
+  .faq-category h3 {
+    color: #0053ba;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+  
+  .faq-category ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .faq-category li {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .faq-category strong {
+    color: #000;
+  }
+  /* estilos de la ia */
+  .ia-chat {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+    text-align: center;
+  }
+  
+  .ia-chat h3 {
+    color: #0057b8;
+    margin-bottom: 15px;
+  }
+  
+  .ia-chat input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+  }
+  
+  .ia-chat button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #0057b8;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .ia-response {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
