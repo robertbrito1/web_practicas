@@ -12,74 +12,78 @@
     <link rel="stylesheet" href="{% static 'estilos/contacto.css' %}">
     <link rel="stylesheet" href="{% static 'estilos/inicio.css' %}">
 
-
-
-
     {% block head %}
     {% endblock %}
 </head>
 <body>
-    <header>
+    <!-- Header con video de fondo -->
+    <header class="header-container">
+        <!-- Video de fondo en el header -->
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="{% static 'estilos/video1.mp4' %}" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+
         <div class="container">
             <h1>Formación Profesional en Tecnología</h1>
             <p>Adquiere las habilidades que necesitas para sobresalir en el mundo de la tecnología.</p>
             <a href="https://fpeuroformac.com/" class="btn-primary" target="_blank" rel="noopener noreferrer">Explorar Cursos</a>
+            
+            <nav class="navbar">
+                <div class="container">
+                    <input type="checkbox" id="menu-toggle" />
+                    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                    <a href="{% url 'inicio' %}" class="logo">FP EUROFORMAC</a>
+                    <ul class="menu">
+                        <li><a href="#cursos">RSC</a></li>
+                        <li><a href="{% url 'nosotros' %}">Sobre Nosotros</a></li>
+                        <li><a href="{% url 'equipo' %}">Nuestro equipo</a></li>
+                    </ul>
+                </div>
+            </nav>
+        
         </div>
     </header>
-    <nav class="navbar">
-        <div class="container">
-          <input type="checkbox" id="menu-toggle" />
-          <label for="menu-toggle" class="menu-icon">&#9776;</label>            <!-- esto es la parte superior donde estaran los diferentes botones -->
-          <a href="{% url 'inicio' %}" class="logo">FP EUROFORMAC</a>                                 <!-- para asi abrir diferentes pestañas -->
-          <ul class="menu">
-            <li><a href="#cursos">RSC</a></li>
-            <li><a href="{% url 'nosotros' %}">Sobre Nosotros</a></li>
-            <li><a href="{% url 'equipo' %}">"Nuestro equipo </a></li>
-          </ul>
-        </div>
-      </nav>
-      
-    
-    
+
+   
     {% block content %}
     {% endblock %}
 
     <footer class="footer text-faded text-center py-5">
-      <div class="container">
-          <p class="m-0">
-              <a href="#" class="link">
-                  <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-              </a>
-              <a href="#" class="link">
-                  <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
-              </a>
-              <a href="#" class="link">
-                  <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                  </span>
-              </a>
-          </p>
-          <p class="m-0 mbt">
-              <a href="sample.html" class="link" style="color: wheat;">Política de privacidad</a> ·
-              <a href="sample.html" class="link" style="color: wheat;">Aviso legal</a> ·
-              <a href="sample.html" class="link" style="color: wheat;">Cookies</a>
-          </p>
-          <p class="m-0 mbt1">&copy; FPEUROFORMA 2025</p>
-      </div>
+        <div class="container">
+            <p class="m-0">
+                <a href="#" class="link">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <a href="#" class="link">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <a href="#" class="link">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </p>
+            <p class="m-0 mbt">
+                <a href="sample.html" class="link" style="color: wheat;">Política de privacidad</a> ·
+                <a href="sample.html" class="link" style="color: wheat;">Aviso legal</a> ·
+                <a href="sample.html" class="link" style="color: wheat;">Cookies</a>
+            </p>
+            <p class="m-0 mbt1">&copy; FPEUROFORMA 2025</p>
+        </div>
     </footer>
 
     {% block scripts %}
-    
     {% endblock %}
     <a href="{% url 'contacto' %}" class="floating-button {% if request.path == '/contacto/' %}active{% endif %}">Contáctanos</a>
-
 </body>
-
 </html>
