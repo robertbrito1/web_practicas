@@ -9,3 +9,5 @@ def nosotros(request):
 
 def equipo(request):
     return render(request, 'equipo.html')
+def preguntas(request):
+    return render(request, 'preguntas.html')

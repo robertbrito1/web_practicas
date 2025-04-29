@@ -71,3 +71,7 @@
     box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5); /* Aumenta la sombra al hacer hover */
     text-align: center; /* Asegura que el texto esté centrado */
 }
+.faq-category a {
+  text-decoration: none;
+  color: inherit; /* Asegura que el color se mantenga igual */
+}
