@@ -2,5 +2,46 @@
 {% load static %}
 
 {% block content %}
-<h1>preguntas </h1>
+
+
+<div class="faq-wrapper">
+    <div class="faq-nav">
+      <button onclick="mostrarFaq('dam')">DAM</button>
+      <button onclick="mostrarFaq('daw')">DAW</button>
+      <button onclick="mostrarFaq('asir')">ASIR</button>
+      <button onclick="mostrarFaq('beca')">Beca MEC</button>
+    </div>
+    <div class="faq-info">
+        <div id="dam" class="faq-section faq-activa">
+            <h2>DAM</h2>
+            <p><strong>¿Qué se aprende en DAM?</strong> Se enfoca en apps móviles y escritorio, bases de datos y Java.</p>
+            <p><strong>¿Qué salidas tiene?</strong> Desarrollador de apps, programador Java, soporte multiplataforma.</p>
+        </div>
+
+        <div id="daw" class="faq-section active">
+            <h2>DAW</h2>
+            <p><strong>¿Qué se estudia en DAW?</strong> Desarrollo web: HTML, CSS, JS, PHP, MySQL.</p>
+            <p><strong>¿Freelancer?</strong> Sí, muchos titulados trabajan por cuenta propia.</p>
+        </div>
+
+        <div id="asir" class="faq-section active">
+            <h2>ASIR</h2>
+            <p><strong>¿Qué incluye?</strong> Redes, servidores, ciberseguridad y sistemas.</p>
+            <p><strong>¿Conocimientos previos?</strong> No obligatorios, pero recomendable interés en informática.</p>
+        </div>
+
+        <div id="beca" class="faq-section active">
+            <h2>Beca MEC</h2>
+            <p><strong>¿Cuándo se solicita?</strong> Entre abril y julio en la web del Ministerio.</p>
+            <p><strong>¿Qué cubre?</strong> Transporte, matrícula, material y alojamiento (según caso).</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function mostrarFaq(id) {
+      document.querySelectorAll('.faq-section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    </script>
 {% endblock %}
