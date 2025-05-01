@@ -4,6 +4,9 @@ from django.shortcuts import render
 def inicio(request):
     return render(request, 'inicio.html')
 
+def profesor1(request):
+    return render(request, 'profesores/profesor1.html')
+
 def nosotros(request):
     return render(request, 'nosotros.html')
 
