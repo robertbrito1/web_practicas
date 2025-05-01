@@ -1,6 +1,31 @@
 {% extends "base.html" %}
-{% load static %}
-
 {% block content %}
-<h1>equipo</h1>
+<div class="equipo-container">
+  <h2>Conoce a nuestro equipo docente</h2>
+
+  <div class="profesores-grid">
+    <div class="profesor-card">
+      <h3>Profesor 1</h3>
+      <p><strong>Experiencia:</strong> 10 años</p>
+      <p><strong>Asignaturas:</strong> Programación, Bases de Datos</p>
+      <p><strong>FP:</strong> DAM</p>
+    </div>
+
+    <div class="profesor-card">
+      <h3>Profesor 2</h3>
+      <p><strong>Experiencia:</strong> 8 años</p>
+      <p><strong>Asignaturas:</strong> Sistemas Operativos</p>
+      <p><strong>FP:</strong> ASIR</p>
+    </div>
+
+    <!-- Repite este bloque para profesores 3 al 8 -->
+    <div class="profesor-card"><h3>Profesor 3</h3><p><strong>Experiencia:</strong> 12 años</p><p><strong>Asignaturas:</strong> Desarrollo Web</p><p><strong>FP:</strong> DAW</p></div>
+    <div class="profesor-card"><h3>Profesor 4</h3><p><strong>Experiencia:</strong> 5 años</p><p><strong>Asignaturas:</strong> Redes</p><p><strong>FP:</strong> ASIR</p></div>
+    <div class="profesor-card"><h3>Profesor 5</h3><p><strong>Experiencia:</strong> 6 años</p><p><strong>Asignaturas:</strong> Entornos de desarrollo</p><p><strong>FP:</strong> DAM</p></div>
+    <div class="profesor-card"><h3>Profesor 6</h3><p><strong>Experiencia:</strong> 9 años</p><p><strong>Asignaturas:</strong> Seguridad</p><p><strong>FP:</strong> ASIR</p></div>
+    <div class="profesor-card"><h3>Profesor 7</h3><p><strong>Experiencia:</strong> 7 años</p><p><strong>Asignaturas:</strong> Diseño Web</p><p><strong>FP:</strong> DAW</p></div>
+    <div class="profesor-card"><h3>Profesor 8</h3><p><strong>Experiencia:</strong> 11 años</p><p><strong>Asignaturas:</strong> Proyecto final</p><p><strong>FP:</strong> DAM</p></div>
+
+  </div>
+</div>
 {% endblock %}
