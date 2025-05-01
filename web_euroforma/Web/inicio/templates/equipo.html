@@ -12,7 +12,7 @@
       </a>
 
       <div class="profesor-card">
-        <a href="{% url 'profesor2' %}" class="profesor-card" style="text-decoration: none; color: inherit;">
+        <a href="{% url 'profesor2' %}" style="text-decoration: none; color: inherit;">
           <h3>Profesor 2</h3>
           <p><strong>Experiencia:</strong> 8 años</p>
           <p><strong>Asignaturas:</strong> Sistemas Operativos</p>
@@ -21,7 +21,15 @@
       </div>
 
     <!-- Repite este bloque para profesores 3 al 8 -->
-    <div class="profesor-card"><h3>Profesor 3</h3><p><strong>Experiencia:</strong> 12 años</p><p><strong>Asignaturas:</strong> Desarrollo Web</p><p><strong>FP:</strong> DAW</p></div>
+    <div class="profesor-card">
+      <a href="{% url 'profesor3' %}" style="text-decoration: none; color: inherit;">
+        <h3>Profesor 3</h3>
+        <p><strong>Experiencia:</strong> 12 años</p>
+        <p><strong>Asignaturas:</strong> Desarrollo Web</p>
+        <p><strong>FP:</strong> DAW</p>
+      </a>
+    </div>
+    
     <div class="profesor-card"><h3>Profesor 4</h3><p><strong>Experiencia:</strong> 5 años</p><p><strong>Asignaturas:</strong> Redes</p><p><strong>FP:</strong> ASIR</p></div>
     <div class="profesor-card"><h3>Profesor 5</h3><p><strong>Experiencia:</strong> 6 años</p><p><strong>Asignaturas:</strong> Entornos de desarrollo</p><p><strong>FP:</strong> DAM</p></div>
     <div class="profesor-card"><h3>Profesor 6</h3><p><strong>Experiencia:</strong> 9 años</p><p><strong>Asignaturas:</strong> Seguridad</p><p><strong>FP:</strong> ASIR</p></div>

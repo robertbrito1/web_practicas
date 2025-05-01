@@ -10,6 +10,9 @@ def profesor1(request):
 def profesor2(request):
     return render(request, 'profesores/profesor2.html')
 
+def profesor3(request):
+    return render(request, 'profesores/profesor3.html')
+
 def nosotros(request):
     return render(request, 'nosotros.html')
 
