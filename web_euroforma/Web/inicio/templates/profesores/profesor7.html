@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="detalle-profesor">
+    <h2>Profesor 7 - Marta López</h2>
+
+    <p><strong>Experiencia:</strong> 7 años enseñando diseño web y frontend.</p>
+    <p><strong>Asignaturas:</strong> Diseño Web</p>
+    <p><strong>FP:</strong> DAW</p>
+    <p><strong>Centros donde ha trabajado:</strong> IES Miramar, CFT Diseño Málaga.</p>
+    <p><strong>Formación:</strong> Grado en Diseño Digital, Experta en HTML, CSS y UX.</p>
+
+    <a href="{% url 'equipo' %}" class="btn-volver">← Volver al equipo</a>
+  </div>
+{% endblock %}

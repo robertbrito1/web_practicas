@@ -13,6 +13,21 @@ def profesor2(request):
 def profesor3(request):
     return render(request, 'profesores/profesor3.html')
 
+def profesor4(request):
+    return render(request, 'profesores/profesor4.html')
+
+def profesor5(request):
+    return render(request, 'profesores/profesor5.html')
+
+def profesor6(request):
+    return render(request, 'profesores/profesor6.html')
+
+def profesor7(request):
+    return render(request, 'profesores/profesor7.html')
+
+def profesor8(request):
+    return render(request, 'profesores/profesor8.html')
+
 def nosotros(request):
     return render(request, 'nosotros.html')
 

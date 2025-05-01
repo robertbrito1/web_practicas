@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="detalle-profesor">
+    <h2>Profesor 4 - Marcos Ruiz</h2>
+
+    <p><strong>Experiencia:</strong> 5 años enseñando redes y conectividad.</p>
+    <p><strong>Asignaturas:</strong> Redes</p>
+    <p><strong>FP:</strong> ASIR</p>
+    <p><strong>Centros donde ha trabajado:</strong> IES Campanillas, Instituto RedTech.</p>
+    <p><strong>Formación:</strong> Grado en Redes y Comunicaciones, Cisco Certified.</p>
+
+    <a href="{% url 'equipo' %}" class="btn-volver">← Volver al equipo</a>
+  </div>
+{% endblock %}
