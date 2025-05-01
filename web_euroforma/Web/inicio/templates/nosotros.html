@@ -2,5 +2,35 @@
 {% load static %}
 
 {% block content %}
-<h1>sobre nosotros </h1>
+  <div style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+    <div style="
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 900px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    ">
+      <h2 style="text-align: center; margin-bottom: 20px;">Sobre Euroformac</h2>
+
+      <p><strong>Euroformac</strong> es una consultora de formación con más de 25 años de experiencia, especializada en ofrecer soluciones formativas adaptadas a las necesidades del mercado laboral actual. Fundada en 1998 por Pedro Guzmán, la empresa ha crecido de forma sostenida, con sedes en ciudades como Málaga, Madrid, Murcia y Valencia.</p>
+
+      <p>Su enfoque se centra en la formación a lo largo de toda la vida, ofreciendo programas de capacitación digital, formación e-learning con contenidos de calidad y prestación de servicios tanto para empresas como para instituciones públicas.</p>
+
+      <p>Euroformac ha sido pionera en la implementación de metodologías innovadoras como el <em>Learning by Doing</em> y ha desarrollado programas de referencia en competencias digitales, colaborando con el SEPE y usando fondos Next Generation.</p>
+
+      <p>Además, participa activamente en proyectos de responsabilidad social, promoviendo el cambio social y el bienestar de las personas.</p>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="{% url 'inicio' %}" style="
+          background-color: #f1c40f;
+          color: black;
+          padding: 10px 20px;
+          border-radius: 10px;
+          text-decoration: none;
+          font-weight: bold;
+        ">← Volver al inicio</a>
+      </div>
+    </div>
+  </div>
 {% endblock %}
