@@ -7,6 +7,9 @@ def inicio(request):
 def profesor1(request):
     return render(request, 'profesores/profesor1.html')
 
+def profesor2(request):
+    return render(request, 'profesores/profesor2.html')
+
 def nosotros(request):
     return render(request, 'nosotros.html')
 
