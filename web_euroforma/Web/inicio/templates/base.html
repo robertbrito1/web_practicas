@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'estilos/contacto.css' %}">
     <link rel="stylesheet" href="{% static 'estilos/inicio.css' %}">
     <link rel="stylesheet" href="{% static 'estilos/pregunta.css' %}">
+    <link rel="stylesheet" href="{% static 'estilos/reseña.css' %}">
     {% block head %}
     {% endblock %}
 </head>
@@ -85,7 +86,10 @@
     </footer>
 
     {% block scripts %}
+    <!-- Agregar el enlace al archivo JavaScript -->
+    <script src="{% static 'jv/scroll-animation.js' %}"></script>
     {% endblock %}
+
     <a href="{% url 'contacto' %}" class="floating-button {% if request.path == '/contacto/' %}active{% endif %}">Contáctanos</a>
 </body>
 </html>

@@ -1,0 +1,20 @@
+/* Estilo para el contenedor de reseñas */
+.google-reviews {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(50px);
+    will-change: opacity, transform;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cuando el elemento es visible en la pantalla */
+.google-reviews.visible {
+    opacity: 1;
+    transform: translateY(0); /* Desplaza el elemento hacia su posición original */
+}
