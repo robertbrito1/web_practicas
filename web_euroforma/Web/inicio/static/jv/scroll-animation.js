@@ -43,16 +43,34 @@ function toggleFAQVisibility() {
         }
     });
 }
+function toggleEuroformacVisibility() {
+    const euroCard = document.querySelector('.euroformac-card');
+    if (!euroCard) return;
+
+    if (isElementInViewport(euroCard)) {
+        if (!euroCard.classList.contains('visible')) {
+            euroCard.classList.remove('hidden');
+            euroCard.classList.add('visible');
+        }
+    } else {
+        if (!euroCard.classList.contains('hidden')) {
+            euroCard.classList.remove('visible');
+            euroCard.classList.add('hidden');
+        }
+    }
+}
 
 // Escuchar scroll y cargar
 window.addEventListener('scroll', () => {
     toggleVisibilityOnScroll();
     toggleTitleVisibility();
     toggleFAQVisibility();
+    toggleEuroformacVisibility();
 });
 
 window.addEventListener('load', () => {
     toggleVisibilityOnScroll();
     toggleTitleVisibility();
     toggleFAQVisibility();
+    toggleEuroformacVisibility();
 });

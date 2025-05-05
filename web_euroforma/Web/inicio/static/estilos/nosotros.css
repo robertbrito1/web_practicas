@@ -1,0 +1,111 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+.euroformac-card {
+    display: block;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    transition: transform 1s ease, box-shadow 1s ease;
+    
+    font-size: 1.3rem;
+    line-height: 1.8;
+
+    /* Animación de entrada */
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.euroformac-card strong {
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.euroformac-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.euroformac-card.visible {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Salida */
+.euroformac-card.hidden {
+    animation: fadeOutDown 0.8s ease-in forwards;
+}
+
+/*parrafo y video de nuestro hoy*/
+.parrafo {
+    background: linear-gradient(135deg, #C9B200 0%, #0056b3 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    transition: transform 0.4s ease;
+    margin: 60px auto;
+    max-width: 1000px;
+  }
+  
+  .parrafo:hover {
+    transform: translateY(-5px);
+  }
+  
+  .nuestro-hoy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgba(0, 56, 138, 1);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+  }
+  
+  
+  .nuestro-hoy video {
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 40px auto;
+  }
+  .titulo-hoy {
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+    
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 40px auto;  
+    
+  }

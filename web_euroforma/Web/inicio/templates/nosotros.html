@@ -2,35 +2,33 @@
 {% load static %}
 
 {% block content %}
-  <div style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
-    <div style="
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        padding: 30px;
-        border-radius: 15px;
-        max-width: 900px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    ">
-      <h2 style="text-align: center; margin-bottom: 20px;">Sobre Euroformac</h2>
+  
 
-      <p><strong>Euroformac</strong> es una consultora de formación con más de 25 años de experiencia, especializada en ofrecer soluciones formativas adaptadas a las necesidades del mercado laboral actual. Fundada en 1998 por Pedro Guzmán, la empresa ha crecido de forma sostenida, con sedes en ciudades como Málaga, Madrid, Murcia y Valencia.</p>
+     
+      <div class="parrafo">
+      <p>En Euroformac, nuestro objetivo es diagnosticar, planificar, ejecutar y evaluar las necesidades de formación de empresas, organizaciones y otros colectivos. 
 
-      <p>Su enfoque se centra en la formación a lo largo de toda la vida, ofreciendo programas de capacitación digital, formación e-learning con contenidos de calidad y prestación de servicios tanto para empresas como para instituciones públicas.</p>
+        Para ello, queremos ser una referencia válida en el mercado de los servicios de formación en el ámbito nacional, así como satisfacer las necesidades de formación tanto explícitas como implícitas de nuestros clientes.
+        
+        Nuestro equipo de profesionales ponen a disposición de todos sus departamentos los recursos materiales y vías de comunicación necesarios para el buen desarrollo de la actividad.
+        Promovemos la comunicación inter e intra departamental buscando una relación transparente y manteniendo la ética profesional. Cumplimos la legislación vigente y actualizamos metodologías
+        , herramientas y contenidos didácticos que marquen la diferencia con otras empresas del sector. </p>
 
-      <p>Euroformac ha sido pionera en la implementación de metodologías innovadoras como el <em>Learning by Doing</em> y ha desarrollado programas de referencia en competencias digitales, colaborando con el SEPE y usando fondos Next Generation.</p>
 
-      <p>Además, participa activamente en proyectos de responsabilidad social, promoviendo el cambio social y el bienestar de las personas.</p>
-
-      <div style="text-align: center; margin-top: 30px;">
-        <a href="{% url 'inicio' %}" style="
-          background-color: #f1c40f;
-          color: black;
-          padding: 10px 20px;
-          border-radius: 10px;
-          text-decoration: none;
-          font-weight: bold;
-        ">← Volver al inicio</a>
-      </div>
+        
     </div>
-  </div>
+
+    <h1 class="titulo-hoy">
+      <span style="color: rgba(255, 226, 3, 0.966);">EUROFORMAC</span> <span style="color: rgba(0, 56, 138, 1)">HOY</span>
+    </h1>
+
+    <div class="nuestro-hoy">
+      
+        <video autoplay muted loop playsinline>
+            <source src="{% static 'videos/video-conocenos.mp4' %}" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+
 {% endblock %}
