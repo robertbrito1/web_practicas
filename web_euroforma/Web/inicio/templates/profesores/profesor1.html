@@ -3,13 +3,11 @@
 
 {% block content %}
 <div class="detalle-profesor">
-    <h2>Juan López</h2>
+    <h2>{{ profesor.nombre }} {{ profesor.apellido }}</h2>
 
-    <p><strong>Experiencia:</strong> Más de 10 años enseñando desarrollo de software.</p>
-    <p><strong>Asignaturas:</strong> Programación, Bases de Datos.</p>
-    <p><strong>FP:</strong> DAM</p>
-    <p><strong>Centros donde ha trabajado:</strong> IES Málaga Tech, FP Granada Digital.</p>
-    <p><strong>Formación:</strong> Grado en Ingeniería Informática, Máster en Desarrollo Web.</p>
+    <p><strong>Experiencia:</strong> {{ profesor.experiencia }} años enseñando desarrollo de software.</p>
+    <p><strong>Centros donde ha trabajado:</strong> {{ profesor.centros_trabajo }}</p>
+    <p><strong>Formación:</strong> {{ profesor.formacion }}</p>
 
     <a href="{% url 'equipo' %}" class="btn-volver">← Volver al equipo</a>
 </div>

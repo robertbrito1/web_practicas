@@ -3,82 +3,15 @@
 <div class="equipo-container">
   <h2>Conoce a nuestro equipo docente</h2>
 
-    <a href="{% url 'profesor1' %}" class="profesor-card">
-    <img src="/static/imagenes/p1.jpg" alt="Profesor 1" class="foto-profesor">
-    <div class="info-profesor">
-      <p><strong>Experiencia:</strong> 10 años</p>
-      <p><strong>Asignaturas:</strong> Programación, Bases de Datos</p>
-      <p><strong>FP:</strong> DAM</p>
-    </div>
-  </a>
-
-       <a href="{% url 'profesor2' %}" class="profesor-card">
-       <img src="/static/imagenes/p2.jpg" alt="Profesor 1" class="foto-profesor">
-       <div class="info-profesor">
-          <p><strong>Experiencia:</strong> 8 años</p>
-          <p><strong>Asignaturas:</strong> Sistemas Operativos</p>
-          <p><strong>FP:</strong> ASIR</p>
-        
+  {% for profesor in profesores %}
+    <a href="{% url 'profesor_detalle' slug=profesor.slug %}" class="profesor-card">
+      <img src="{{ profesor.imagen.url }}" alt="{{ profesor.nombre }}" class="foto-profesor">
+      <div class="info-profesor">
+        <p><strong>Experiencia:</strong> {{ profesor.experiencia }} años</p>
+        <p><strong>Asignaturas:</strong> {{ profesor.asignaturas }}</p>
+        <p><strong>FP:</strong> {{ profesor.fp }}</p>
       </div>
     </a>
-
-    <!-- Repite este bloque para profesores 3 al 8 -->
-    <a href="{% url 'profesor3' %}" class="profesor-card">
-      <img src="/static/imagenes/p3.jpg" alt="Profesor 1" class="foto-profesor">
-      <div class="info-profesor">
-        <p><strong>Experiencia:</strong> 12 años</p>
-        <p><strong>Asignaturas:</strong> Desarrollo Web</p>
-        <p><strong>FP:</strong> DAW</p>
-      
-    </div>
-  </a>
-    
-    <a href="{% url 'profesor4' %}" class="profesor-card">
-      <img src="/static/imagenes/p4.jpg" alt="Profesor 1" class="foto-profesor">
-      <div class="info-profesor">
-        <p><strong>Experiencia:</strong> 5 años</p>
-        <p><strong>Asignaturas:</strong> Redes</p>
-        <p><strong>FP:</strong> ASIR</p>
-      </div>
-    </a>
-
-    <a href="{% url 'profesor5' %}" class="profesor-card">
-      <img src="/static/imagenes/p5.jpg" alt="Profesor 1" class="foto-profesor">
-      <div class="info-profesor">
-        <p><strong>Experiencia:</strong> 6 años</p>
-        <p><strong>Asignaturas:</strong> Entornos de desarrollo</p>
-        <p><strong>FP:</strong> DAM</p>
-      
-    </div>
-  </a>
-
-      <a href="{% url 'profesor6' %}" class="profesor-card">
-      <img src="/static/imagenes/p6.jpg" alt="Profesor 1" class="foto-profesor">
-      <div class="info-profesor">
-        <p><strong>Experiencia:</strong> 9 años</p>
-        <p><strong>Asignaturas:</strong> Seguridad</p>
-        <p><strong>FP:</strong> ASIR</p>
-      </div>
-    </a>
-    
-      <a href="{% url 'profesor7' %}" class="profesor-card">
-       <img src="/static/imagenes/p7.jpg" alt="Profesor 1" class="foto-profesor">
-        <div class="info-profesor">
-        <p><strong>Experiencia:</strong> 7 años</p>
-        <p><strong>Asignaturas:</strong> Diseño Web</p>
-        <p><strong>FP:</strong> DAW</p>
-      </div>
-    </a>
-
-    <a href="{% url 'profesor8' %}" class="profesor-card">
-      <img src="/static/imagenes/p8.jpg" alt="Profesor 1" class="foto-profesor">
-      <div class="info-profesor">
-        <p><strong>Experiencia:</strong> 11 años</p>
-        <p><strong>Asignaturas:</strong> Proyecto final</p>
-        <p><strong>FP:</strong> DAM</p>
-      </div>
-    </a>
-
-  </div>
+  {% endfor %}
 </div>
 {% endblock %}

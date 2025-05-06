@@ -60,3 +60,61 @@
 .see-more:hover {
   background-color: #003f8a;
 }
+.hero-section {
+ 
+  color: #ffffff;
+  padding: 60px 20px;
+  border-radius: 12px;
+
+  /* Elimina centrado automático y coloca margen solo a la izquierda */
+  margin-left:300px;
+  margin-right: 0;
+  max-width: 400px;
+}
+
+
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  
+}
+
+.hero-section h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #4da5fd;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Línea con sombra debajo del <h3> */
+.hero-section h3::after {
+  content: "";
+  display: block;
+  margin: 2px auto 0;
+  width: 80%;
+  height: 4px;
+  background: #99cfff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+.video-inicio {
+  
+  
+ 
+
+  width: 100vw;        /* Ocupa todo el ancho de la ventana */
+  max-width: none;     /* Quita cualquier límite de ancho anterior */
+  height: auto;
+
+  border-radius: 12px;
+  
+}
+
+.video-inicio video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
