@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{% static 'estilos/pregunta.css' %}">
     <link rel="stylesheet" href="{% static 'estilos/reseña.css' %}">
     <link rel="stylesheet" href="{% static 'estilos/nosotros.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     {% block head %}
     {% endblock %}
 </head>
@@ -89,6 +90,7 @@
     {% block scripts %}
     <!-- Agregar el enlace al archivo JavaScript -->
     <script src="{% static 'jv/scroll-animation.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     {% endblock %}
 
     <a href="{% url 'contacto' %}" class="floating-button {% if request.path == '/contacto/' %}active{% endif %}">Contáctanos</a>
