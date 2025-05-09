@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="max-width: 800px; margin: auto; padding: 2rem; color: #E6BE00;">
+    <h1>Política de Cookies</h1>
+    <p>Última actualización: 9 de mayo de 2025</p>
+
+    <h2>1. ¿Qué son las cookies?</h2>
+    <p>Una cookie es un pequeño archivo de texto que se almacena en tu navegador cuando visitas un sitio web. Su finalidad es recordar información sobre tu visita, como el idioma preferido y otras configuraciones.</p>
+
+    <h2>2. Tipos de cookies utilizadas</h2>
+    <ul>
+        <li><strong>Cookies técnicas:</strong> Necesarias para el funcionamiento del sitio.</li>
+        <li><strong>Cookies de personalización:</strong> Permiten recordar preferencias como el idioma.</li>
+        <li><strong>Cookies de análisis:</strong> Nos ayudan a entender cómo los usuarios interactúan con el sitio.</li>
+        <li><strong>Cookies publicitarias:</strong> Utilizadas para mostrar publicidad relevante.</li>
+    </ul>
+
+    <h2>3. Cómo desactivar las cookies</h2>
+    <p>Puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones del navegador instalado en tu ordenador:</p>
+    <ul>
+        <li>Google Chrome: Configuración > Privacidad y seguridad > Cookies</li>
+        <li>Mozilla Firefox: Opciones > Privacidad y seguridad</li>
+        <li>Safari: Preferencias > Privacidad</li>
+        <li>Edge: Configuración > Cookies y permisos del sitio</li>
+    </ul>
+
+    <h2>4. Cookies de terceros</h2>
+    <p>Este sitio puede utilizar servicios de terceros que recopilan información con fines estadísticos o publicitarios. Por ejemplo: Google Analytics.</p>
+
+    <h2>5. Aceptación de la política de cookies</h2>
+    <p>Al continuar navegando por este sitio, se considera que aceptas el uso de cookies. Puedes modificar tus preferencias en cualquier momento desde la configuración de tu navegador.</p>
+
+    <h2>6. Contacto</h2>
+    <p>Para cualquier duda sobre el uso de cookies, escríbenos a:  <a href="{% url 'contacto' %}" style="color: #E6BE00;">privacidad@tudominio.com</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="max-width: 800px; margin: auto; padding: 2rem; color: #E6BE00;">
+    <h1>Política de Privacidad</h1>
+    <p>Última actualización: 9 de mayo de 2025</p>
+
+    <h2>1. Introducción</h2>
+    <p>En Euroformac, valoramos tu privacidad y nos comprometemos a proteger los datos personales que nos proporcionas. Esta política explica cómo recopilamos, usamos y protegemos tu información.</p>
+
+    <h2>2. Información que recopilamos</h2>
+    <ul>
+        <li>Datos personales como nombre, dirección de correo electrónico, etc.</li>
+        <li>Información técnica, como la dirección IP, navegador, sistema operativo.</li>
+        <li>Información sobre cómo usas nuestro sitio web.</li>
+    </ul>
+
+    <h2>3. Uso de la información</h2>
+    <p>Usamos la información para:</p>
+    <ul>
+        <li>Proveer y mantener nuestros servicios.</li>
+        <li>Comunicar actualizaciones o promociones.</li>
+        <li>Mejorar la experiencia del usuario.</li>
+        <li>Cumplir con obligaciones legales.</li>
+    </ul>
+
+    <h2>4. Compartir información</h2>
+    <p>No compartimos tus datos personales con terceros, excepto cuando sea necesario para proporcionar nuestros servicios o cuando la ley lo requiera.</p>
+
+    <h2>5. Seguridad</h2>
+    <p>Aplicamos medidas de seguridad técnicas y organizativas para proteger tu información personal.</p>
+
+    <h2>6. Tus derechos</h2>
+    <p>Tienes derecho a acceder, rectificar o eliminar tus datos personales, así como a oponerte a su tratamiento en cualquier momento.</p>
+
+    <h2>7. Cambios en esta política</h2>
+    <p>Nos reservamos el derecho de modificar esta política en cualquier momento. Las modificaciones serán publicadas en esta misma página.</p>
+
+    <h2>8. Contacto</h2>
+    <p>Si tienes preguntas sobre esta política, puedes contactarnos a través de: <a href="{% url 'contacto' %}">Contactanos</a></p>
+</div>
+{% endblock %}

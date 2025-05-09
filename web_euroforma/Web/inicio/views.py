@@ -20,3 +20,10 @@ def nosotros(request):
 
 def preguntas(request):
     return render(request, 'preguntas.html')
+def politicas(request):
+    return render(request, 'politicas.html')
+
+def avisos(request):
+    return render(request, 'avisos.html')
+def cockies(request):
+    return render(request, 'cockies.html')

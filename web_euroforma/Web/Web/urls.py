@@ -25,6 +25,9 @@ urlpatterns = [
     path('nosotros/', include('inicio.urls')),
     path('equipo/', include('inicio.urls')), 
     path('preguntas/', include('inicio.urls')),   # Rutas de la app "inicio"
+    path('politicas/', include('inicio.urls')),
+    path('avisos/', include('inicio.urls')),
+    path('cockies/', include('inicio.urls')),
     path('', include('inicio.urls')),           # Página de inicio
 ]
 
