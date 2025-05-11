@@ -13,7 +13,7 @@ urlpatterns = [
     path('avisos', views.avisos, name='avisos'), 
     path('cockies', views.cockies, name='cockies'), 
     path('', views.inicio, name='inicio'),
-    
+    path('instalaciones/', views.instalaciones, name='instalaciones'),
     
     
 ]
