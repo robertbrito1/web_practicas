@@ -241,3 +241,8 @@ body {
     background-color: #001d3d !important; /* azul oscuro */
     background-image: none !important;
 }
+
+.instalaciones-page {
+    background-color: #001F3F; /* azul oscuro */
+    color: white;              /* texto blanco */
+}
