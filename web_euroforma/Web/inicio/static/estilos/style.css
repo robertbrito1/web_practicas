@@ -243,6 +243,7 @@ body {
 }
 
 .instalaciones-page {
-    background-color: #001F3F; /* azul oscuro */
-    color: white;              /* texto blanco */
+    background-color: #001f3f !important;  /* azul oscuro */
+    background-image: none !important;     /* esto borra cualquier fondo heredado */
+    color: white;
 }
