@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% block body_class %}fondo-azul{% endblock %}
 {% block content %}
 
 <div class="hero-background">
@@ -16,9 +16,18 @@
 <h1 class="faq-title">sobre nosotros</h1>
 
 
-<a href="{% url 'nosotros' %}" class="euroformac-card">
-    <strong>Euroformac</strong> es una consultora de formación con más de 25 años de experiencia, especializada en ofrecer soluciones formativas adaptadas a las necesidades del mercado laboral actual. Fundada en 1998 por Pedro Guzmán, la empresa ha crecido de forma sostenida, con sedes en ciudades como Málaga, Madrid, Murcia y Valencia.
-</a>
+<div class="nosotros-card">
+    <a href="{% url 'nosotros' %}">
+        <img src="{% static 'imagenes/euro.png' %}" alt="Euroformac Formación Profesional">
+    </a>
+    <div class="nosotros-texto">
+        <strong>Euroformac</strong> nuestro objetivo es diagnosticar, planificar, ejecutar y evaluar las necesidades de formación de empresas, organizaciones y otros colectivos.
+        Para ello, queremos ser una referencia válida en el mercado de los servicios de formación en el ámbito nacional, así como satisfacer las necesidades de formación tanto explícitas como implícitas de nuestros clientes. 
+        Nuestro equipo de profesionales ponen a disposición de todos sus departamentos los recursos materiales y vías de comunicación necesarios para el buen desarrollo de la actividad. 
+        Promovemos la comunicación inter e intra departamental buscando una relación transparente y manteniendo la ética profesional. Cumplimos la legislación vigente y actualizamos metodologías, herramientas y contenidos didácticos que marquen la diferencia con otras empresas del sector. 
+    </div>
+</div>
+
 
 <!-- Apartado de las preguntas frecuentes (FAQ) -->
 <h2 class="faq-title">Preguntas frecuentes</h2>
@@ -107,11 +116,12 @@
 
 <h2 class="faq-title">Reseñas de Google</h2>
 <!-- Aquí es donde quieres que aparezcan las reseñas -->
-<div class="google-reviews">
+  <div class="google-reviews">
     <!-- Código de Elfsight para mostrar las reseñas -->
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-e8cadc83d-8b94-490b-a33d-a6b79d75045c" data-elfsight-app-lazy></div>
-</div>
+    
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-0cadc83d-8b94-490b-a33d-a6b79d75045c" data-elfsight-app-lazy></div>
+  </div>
 
 
 {% endblock %}

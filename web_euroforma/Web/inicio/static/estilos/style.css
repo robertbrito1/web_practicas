@@ -4,11 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #003366; /* Azul de fondo */
-    color: #FFD700; /* Amarillo dorado */
-}
+
 
 /* Contenedor general */
 .container {
@@ -105,12 +101,9 @@ footer p {
 }
 
 /* === INICIO - Fondo estático de la web === */
-body {
-    background-image: url('/static/estilos/Fondo_Web_Euroformac.jpg');  /* Ruta accesible para Django */
-    background-size: cover;              /* Que cubra toda la pantalla */
-    background-repeat: no-repeat;        /* Que no se repita */
-    background-position: center center;  /* Centrado */
-    background-attachment: fixed;        /* Se mantiene al hacer scroll */
+body.fondo-azul {
+    background-color: #001d3d !important;
+    background-image: none !important;
 }
 /* === FIN - Fondo estático de la web === */
 /*diseño de profesores y nuestro equipo */
@@ -127,116 +120,7 @@ body {
     color: #003366;
   }
   
-  /* Grid de profesores */
-  .profesores-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  
-  /* Tarjetas de profesor */
-  .profesor-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    border: none;
-    border-radius: 16px;
-    padding: 25px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    text-align: center;
-  }
-  
-  @media (min-width: 600px) {
-    .profesor-card {
-      flex-direction: row;
-      text-align: left;
-    }
-  
-    .profesor-card .info-profesor {
-      margin-left: 20px;
-    }
-  }
-  
-  .profesor-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    background-color: #f9fcff;
-  }
-  
-  /* Imagen del profesor */
-  .foto-profesor {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;
-  }
-  
-  /* Título del profesor */
-  .profesor-card h3 {
-    font-size: 1.3rem;
-    color: #0053ba;
-    margin-bottom: 10px;
-  }
-  
-  /* Párrafos */
-  .profesor-card p {
-    margin: 6px 0;
-    font-size: 0.95rem;
-    color: #333;
-  }
-  
-  /* Enlaces sin subrayado ni color alterado */
-  .profesor-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    height: 100%;
-  }
-  
-  /* Detalle del profesor */
-  .detalle-profesor {
-    max-width: 850px;
-    margin: 50px auto;
-    padding: 40px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border: 1px solid #cce0ff;
-    text-align: center;
-  }
-  
-  .detalle-profesor h2 {
-    font-size: 2rem;
-    color: #003366;
-    margin-bottom: 20px;
-  }
-  
-  .detalle-profesor p {
-    font-size: 1rem;
-    margin: 10px 0;
-    color: #444;
-  }
-  
-  /* Botón volver */
-  .btn-volver {
-    display: inline-block;
-    margin-top: 30px;
-    background-color: #007bff;
-    color: white;
-    padding: 12px 24px;
-    font-size: 0.95rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-volver:hover {
-    background-color: #0056b3;
-  }
-  
+
   body.cookies {
     background-color: #001d3d !important; /* azul oscuro */
     background-image: none !important;

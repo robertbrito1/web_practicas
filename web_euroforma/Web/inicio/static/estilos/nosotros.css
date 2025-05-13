@@ -19,72 +19,94 @@
     }
 }
 
-.euroformac-card {
-    display: block;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px;
-    background: linear-gradient(135deg, #3b82f6, #9333ea);
+.nosotros-card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0d2a8b, #f0c200); /* Degradado dorado#f0c200 */
+    padding: 30px 40px;
+    border-radius: 200px;
+    gap: 60px; /* Espacio entre imagen y texto */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
     color: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    text-decoration: none;
-    transition: transform 1s ease, box-shadow 1s ease;
-    
-    font-size: 1.3rem;
-    line-height: 1.8;
-
-    /* Animación de entrada */
-    opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-.euroformac-card strong {
-    font-size: 1.6rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.euroformac-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-}
-.euroformac-card.visible {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Salida */
-.euroformac-card.hidden {
-    animation: fadeOutDown 0.8s ease-in forwards;
-}
-
-/*parrafo y video de nuestro hoy*/
-.parrafo {
-    background: linear-gradient(135deg, #C9B200 0%, #0056b3 100%);
-    color: white;
-    padding: 40px;
-    border-radius: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
-    transition: transform 0.4s ease;
-    margin: 60px auto;
-    max-width: 1000px;
-  }
-  
-  .parrafo:hover {
-    transform: translateY(-5px);
-  }
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde suave para mayor definición */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nosotros-card:hover {
+    transform: translateY(-5px); /* Efecto flotante al pasar el cursor */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+
+.nosotros-card img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+     background-color: rgb(25, 36, 133);      /* Fondo blanco */
+    padding: 10px;                /* Espacio alrededor de la imagen */
+    border-radius: 20px;          /* Bordes suaves para que se vea elegante */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacarla */
+    transition: transform 0.3s ease;
+}
+
+.nosotros-texto {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    flex-grow: 1;    
+    flex-shrink: 1;  
+    flex-basis: 600px; /* Ancho inicial más largo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra oscura */
+}
+
+
+
+.video-fondo-container {
+    position: relative;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 100vh; /* La altura ocupará toda la pantalla */
+    overflow: hidden;
+    max-width: 100%; /* Limita el ancho máximo */
+    margin: 0; /* Elimina cualquier margen */
+}
+
+.video-fondo-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el iframe ocupe todo el ancho */
+    height: 100%; /* Asegura que el iframe ocupe toda la altura */
+    object-fit: cover; /* Hace que el video se ajuste completamente al contenedor sin bordes */
+    z-index: 1;
+    pointer-events: none; /* Evita que el video interfiera con los clics */
+}
+
+.evolucion {
+    position: absolute; /* Posiciona el texto sobre el video */
+    top: 20px; /* Mueve el texto hacia la parte superior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el texto horizontalmente */
+    z-index: 2; /* Asegura que el texto esté encima del video */
+    color: #f0c200; /* Color dorado */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem; /* Tamaño de texto mayor para visibilidad */
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para resaltar */
+    margin: 0;
+}
+
+
+
+/* Sombra para resaltar */
+
   
   .nuestro-hoy {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  rgba(0, 56, 138, 1);
-    padding: 30px;
-    border-radius: 16px;
+    background-color:  rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 100px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
     margin: 0 auto 40px auto;
@@ -121,38 +143,129 @@
     flex: 1 1 300px;
     max-width: 350px;
   }
+/* Contenedor principal de la sección */
 
-.map-grid {
+/* Contenedor principal de la sección */
+.lo-que-nos-hace-diferentes {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    justify-content: space-between; /* Coloca los elementos a los lados con espacio entre ellos */
+    padding: 50px 20px;
+    background-color: #f5f5f5; /* Fondo gris claro */
+}
+
+/* Contenedor de la imagen a la izquierda */
+.imagen-left {
+    flex: 1;
+    margin-right: 20px; /* Espacio entre la imagen y los recursos */
+}
+
+.imagen-left img {
+    width: 100%; /* La imagen ocupa todo el ancho disponible */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Contenedor de los recursos a la derecha */
+.recursos-right {
+    flex: 2; /* Los recursos ocuparán el doble de espacio que la imagen */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+    gap: 10px; /* Espacio entre los recursos */
+    width: 80%;
+}
+
+/* Título de la sección */
+.recursos-right h2 {
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    grid-column: span 2; /* Hace que el título ocupe ambas columnas */
+}
+
+/* Estilo general para cada recurso */
+.recurso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.map-item {
-    flex: 1 1 45%; /* Permite que cada mapa tenga un 45% de ancho */
-    min-width: 300px;
+.recurso:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.map-wrapper {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    margin-top: 1rem;
+/* Estilo para los íconos (imágenes o iconos) */
+.recurso .icono {
+    margin-bottom: 20px;
 }
 
-.map-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
+.recurso .icono img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
-.map-iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    pointer-events: none;
+/* Título de cada recurso */
+.recurso .descripcion h3 {
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #0d2a8b;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Descripción de cada recurso */
+.recurso .descripcion p {
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .lo-que-nos-hace-diferentes {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .imagen-left {
+        margin-right: 0;
+        margin-bottom: 20px; /* Espacio debajo de la imagen en pantallas pequeñas */
+    }
+
+    .recursos-right {
+        flex: 1;
+        grid-template-columns: 1fr; /* Solo una columna en pantallas pequeñas */
+    }
+
+    .recurso {
+        flex-direction: row; /* Dispone los íconos y el texto en línea */
+        text-align: left;
+    }
+
+    .recurso .icono {
+        margin-right: 20px;
+    }
+
+    .recurso .descripcion h3 {
+        font-size: 1.3rem;
+    }
+
+    .recurso .descripcion p {
+        font-size: 0.9rem;
+    }
 }

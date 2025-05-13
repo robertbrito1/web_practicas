@@ -1,29 +1,27 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% block body_class %}fondo-azul{% endblock %}
 {% block content %}
   
 
-     <div class="poco-nosotros">
+<div class="video-fondo-container">
+    <iframe 
+        src="https://www.youtube.com/embed/5dCc8XWTCh4?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=5dCc8XWTCh4" 
+        title="AULA 2024. Tech Hub FP Euroformac" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
 
-      <h2>Un Poco Sobre nosotros</h2>
-    
-     </div>
-      <div class="parrafo">
-      <p>En Euroformac, nuestro objetivo es diagnosticar, planificar, ejecutar y evaluar las necesidades de formación de empresas, organizaciones y otros colectivos. 
-
-        Para ello, queremos ser una referencia válida en el mercado de los servicios de formación en el ámbito nacional, así como satisfacer las necesidades de formación tanto explícitas como implícitas de nuestros clientes.
-        
-        Nuestro equipo de profesionales ponen a disposición de todos sus departamentos los recursos materiales y vías de comunicación necesarios para el buen desarrollo de la actividad.
-        Promovemos la comunicación inter e intra departamental buscando una relación transparente y manteniendo la ética profesional. Cumplimos la legislación vigente y actualizamos metodologías
-        , herramientas y contenidos didácticos que marquen la diferencia con otras empresas del sector. </p>
+    <h1 class="evolucion">Evolucionamos Contigo</h1>
+</div>
 
 
-        
-    </div>
+
     
   <h1 class="titulo-hoy">
-      <span style="color: rgba(255, 226, 3, 0.966);">EUROFORMAC</span> <span style="color: rgba(0, 56, 138, 1)">HOY</span>
+      <span style="color: #f0c200;">EUROFORMAC</span> <span style="color: rgb(255, 255, 255)">HOY</span>
     </h1>
 
     <div class="nuestro-hoy">
@@ -33,6 +31,59 @@
             Tu navegador no soporta la etiqueta de video.
         </video>
     </div>
+
+
+<section class="lo-que-nos-hace-diferentes">
+  <!-- Imagen a la izquierda -->
+  <div class="imagen-left">
+    <img src="{% static 'imagenes/r5.png' %}" alt="Imagen destacada" />
+  </div>
+
+  <!-- Contenedor derecho: título + recursos -->
+  <div class="recursos-right">
+    <h2>LO QUE NOS HACE DIFERENTES</h2>
+
+    <div class="recurso">
+      <div class="icono">
+        <img src="{% static 'imagenes/r2.png' %}" alt="Experiencia">
+      </div>
+      <div class="descripcion">
+        <h3>Experiencia</h3>
+        <p>Más de 25 años formando personas.</p>
+      </div>
+    </div>
+
+    <div class="recurso">
+      <div class="icono">
+        <img src="{% static 'imagenes/r1.png' %}" alt="Reinvención">
+      </div>
+      <div class="descripcion">
+        <h3>Reinvención</h3>
+        <p>Metodologías y herramientas formativas innovadoras.</p>
+      </div>
+    </div>
+
+    <div class="recurso">
+      <div class="icono">
+        <img src="{% static 'imagenes/r4.png' %}" alt="Confianza">
+      </div>
+      <div class="descripcion">
+        <h3>Confianza</h3>
+        <p>Organizamos grandes programas de referencia con miles de alumnos.</p>
+      </div>
+    </div>
+
+    <div class="recurso">
+      <div class="icono">
+        <img src="{% static 'imagenes/r3.png' %}" alt="Notoriedad">
+      </div>
+      <div class="descripcion">
+        <h3>Notoriedad</h3>
+        <p>Máxima certificación de calidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
    
    
