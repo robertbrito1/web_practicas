@@ -115,8 +115,3 @@ body.fondo-azul {
     background-image: none !important;
 }
 
-.instalaciones-page {
-    background-color: #001f3f !important;  /* azul oscuro */
-    background-image: none !important;     /* esto borra cualquier fondo heredado */
-    color: white;
-}

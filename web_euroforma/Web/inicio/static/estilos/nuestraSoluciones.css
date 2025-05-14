@@ -1,0 +1,129 @@
+
+.contenedor-tarjetas {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Para que en móviles se acomoden automáticamente */
+  padding: 2rem;
+}
+
+.tarjeta {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background-color: #003049;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.tarjeta.amarillo {
+  background-color: #f6bd1b;
+  color: #fff;
+}
+
+.tarjeta-frente,
+.tarjeta-detras {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: opacity 0.4s ease;
+}
+
+.tarjeta-frente {
+  opacity: 1;           /* La parte frontal debe ser visible por defecto */
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.tarjeta:hover .tarjeta-frente {
+  opacity: 0;           /* Ocultar el frente cuando haces hover */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tarjeta-detras {
+  background-color: #fff;
+  color: #000;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tarjeta:hover .tarjeta-detras {
+  opacity: 1;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.icono {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.tarjeta p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #003049;
+  background: transparent;
+  color: #003049;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.boton:hover {
+  background-color: #003049;
+  color: #fff;
+  pointer-events: auto;
+  z-index: 2;
+}
+.formativas {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  display: inline-block;
+  margin-top: 4rem;
+}
+
+.formativas .azul {
+  color: #00aaff; /* Azul claro */
+}
+
+.formativas .blanco {
+  color: #ffffff; /* Blanco puro */
+}
+
+.formativas::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 4px;
+  background: linear-gradient(to right, #00aaff, #ffffff); /* Subrayado degradado */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
