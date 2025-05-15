@@ -69,17 +69,8 @@ header .btn-primary:hover {
     font-size: 1.2em;
 }
 
-/* Estilo para el footer */
-footer {
-    background-color: #003366;
-    color: #FFD700;
-    text-align: center;
-    padding: 20px 0;
-}
 
-footer p {
-    font-size: 1em;
-}
+
 /* Botón flotante */
 .floating-button {
     position: fixed;

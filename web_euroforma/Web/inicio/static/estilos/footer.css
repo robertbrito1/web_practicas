@@ -1,0 +1,104 @@
+.custom-footer {
+  background-color: #003d59;
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  gap: 15px; /* espacio entre íconos */
+  align-items: center;
+  justify-content: flex-start; /* Usa center si quieres centrado */
+}
+.social-icons img {
+  width: 55px;
+  height: 55px;
+  margin-right: 0;              
+  border-radius: 50%;           /* íconos redondos */
+  background-color: #FFCC00;    /* fondo amarillo */
+  padding: 8px;                 /* espacio interno */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* sombra */
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1); 
+  width: 40px;
+  height: 40px;
+  border-radius: 70%;           /* que se vean redondos */
+  background-color: #FFCC00;    /* fondo amarillo como en la imagen */
+  padding: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.social-icons a img:hover {
+  transform: scale(1.1); /* efecto al pasar el ratón */
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.subvencion-btn {
+  max-width: 180px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.subvencion-btn:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  border-top: 1px solid #fff3;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-links a {
+  margin: 0 5px;
+  color: white;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
