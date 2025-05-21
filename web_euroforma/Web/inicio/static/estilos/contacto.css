@@ -1,72 +1,147 @@
+/* Fondo azul general del body si se usa en base.html */
+.fondo-azul {
+  background-color: #f0f8ff;
+}
+
+/* Contenedor principal del formulario */
 .contenedorformulario {
-    background-color: rgb(209, 184, 40); /* Fondo dorado */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el contenedor */
-    max-width: 600px;
-    margin: 40px auto;
-    color: rgb(23, 78, 180);
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.contenedorformulario table {
-    width: 100%;
-    color:rgb(23, 78, 180);
-}
-
-.contenedorformulario input[type="submit"] {
-    background-color: #11558d; /* Color del botón */
-    color: rgb(255, 248, 248); /* Color del texto */
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 20px; /* Tamaño de la fuente más grande */
-    padding: 15px 30px; /* Más espacio interno */
-    border-radius: 8px; /* Bordes redondeados */
-    width: 200px; /* Ancho del botón */
-};
-
-
-.contenedorformulario input[type="submit"]:hover {
-    background-color: #e6b800; /* Color más oscuro al pasar el mouse */
-}
-
+/* Estilo para alertas */
 .alert {
-    background-color: #fff8dc; /* Fondo claro para el mensaje */
-    color: #000000;
-    border: 1px solid #ffeeba;
-    border-radius: 5px;
-}
-.map-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
 }
 
-.map-item {
-    flex: 1 1 45%; /* Permite que cada mapa tenga un 45% de ancho */
-    min-width: 300px;
+/* Botón de envío */
+input[type="submit"].btn {
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 8px;
 }
 
-.map-wrapper {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    margin-top: 1rem;
+/* Acordeón general */
+.accordion-row {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
-.map-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
+/* Ítems del acordeón */
+.accordion-item {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.map-iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    pointer-events: none;
+/* Cabecera del acordeón */
+.accordion-button {
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  padding: 15px 20px;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button.collapsed {
+  background-color: #6c757d;
+}
+
+.accordion-button:hover {
+  background-color: #0056b3;
+}
+
+/* Cuerpo del acordeón */
+.accordion-body {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Lista de direcciones */
+.accordion-body ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.accordion-body ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.accordion-body ul li::before {
+  content: "📍";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Mapas responsivos */
+.accordion-body iframe {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedorformulario {
+    padding: 20px;
+  }
+
+  .accordion-button {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+
+  .accordion-body ul li {
+    font-size: 15px;
+  }
+
+  .accordion-body iframe {
+    height: 180px;
+  }
+}
+.titulo-sedes {
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(to right, #00aaff, #ffffff);
+  
+
+  
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Línea dorada decorativa debajo del título */
+.titulo-sedes::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #d4af37; /* dorado */
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+  
 }
