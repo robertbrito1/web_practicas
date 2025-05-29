@@ -4,22 +4,33 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'contacto/contacto.css' %}">
 
-<div class="contenedorformulario">
+<div class="contenedor-flex">
+
+  <!-- FORMULARIO -->
+  <div class="contenedorformulario">
+    <h2>CONTACTO</h2>
     {% if "valido" in request.GET %}
     <p class="alert alert-success text-center" style="font-size: 18px; padding: 15px 20px; border-radius: 5px;">
-        Información enviada correctamente, ¡Gracias!
+      Información enviada correctamente, ¡Gracias!
     </p>
     {% endif %}
     <form action="" method="POST" style="text-align: center;">
-        {% csrf_token %}
-        <table style="margin: 20px auto;">{{ miformulario.as_table }}</table>
-        <input type="submit" value="Enviar" class="btn btn-success btn-lg">
+      {% csrf_token %}
+      <table style="margin: 20px auto;">{{ miformulario.as_table }}</table>
+      <input type="submit" value="Enviar" class="btn btn-success btn-lg">
     </form>
+  </div>
+
+  <!-- MAPA -->
+  <div class="contenedor-mapa">
+    <img src="{% static 'imagenes/mapa.png' %}" alt="Mapa global" class="img-mapa">
+  </div>
+
 </div>
 
  <!-- Contenedor principal -->
   <h1 class="titulo-sedes">
-  <span style="color: rgb(23, 78, 180);">Nuestras Sedes</span>
+  <span style="color: rgb(23, 78, 180);">Nuestras</span> <span style="color: rgb(221, 218, 69);">Sedes</span>
 </h1>
 
 

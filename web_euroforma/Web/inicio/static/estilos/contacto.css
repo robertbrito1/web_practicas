@@ -1,31 +1,122 @@
-/* Fondo azul general del body si se usa en base.html */
+/* Fondo general */
+/* Fondo general con margen interno */
 .fondo-azul {
-  background-color: #f0f8ff;
+  background-color: #e6f0ff;
+  min-height: 100vh;
+  padding: 60px 20px; /* Aumenté el padding para más espacio */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
-/* Contenedor principal del formulario */
+/* Contenedor del formulario con margen externo */
 .contenedorformulario {
-  max-width: 700px;
-  margin: 40px auto;
-  background: white;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  flex: 1 1 500px;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+/* Título del formulario (si se incluye) */
+.contenedorformulario h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #333;
 }
 
-/* Estilo para alertas */
-.alert {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-  border-radius: 5px;
+/* Tabla del formulario */
+.contenedorformulario table {
+  width: 100%;
+}
+
+.contenedorformulario table tr {
+  margin-bottom: 15px;
+}
+
+.contenedorformulario table td {
+  padding: 10px 0;
+}
+
+/* Inputs y Textareas */
+.contenedorformulario input[type="text"],
+.contenedorformulario input[type="email"],
+.contenedorformulario textarea,
+.contenedorformulario select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.contenedorformulario input:focus,
+.contenedorformulario textarea:focus,
+.contenedorformulario select:focus {
+  border-color: #66afe9;
+  outline: none;
 }
 
 /* Botón de envío */
 input[type="submit"].btn {
-  padding: 10px 30px;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 30px;
   font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"].btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+/* Alertas */
+.alert {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+  padding: 15px 20px;
   border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contenedor-mapa {
+  flex: 1 1 400px;
+  max-width: 550px;
+  padding: 20px;
+}
+
+/* Imagen del mapa */
+.img-mapa {
+  width: 150%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.contenedor-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .contenedorformulario {
+    padding: 25px 20px;
+  }
+
+  input[type="submit"].btn {
+    width: 100%;
+  }
 }
 
 /* Acordeón general */
@@ -126,12 +217,10 @@ input[type="submit"].btn {
   text-align: center;
   font-weight: bold;
   background: linear-gradient(to right, #00aaff, #ffffff);
-  
-
-  
-  -webkit-text-fill-color: transparent;
+  color: #003366; /* Azul oscuro */
   position: relative;
   margin-bottom: 40px;
+  padding: 20px; /* Opcional: para que el fondo se note mejor */
 }
 
 /* Línea dorada decorativa debajo del título */
