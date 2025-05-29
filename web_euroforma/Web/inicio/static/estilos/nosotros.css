@@ -236,36 +236,117 @@
 }
 
 /* Responsividad para pantallas pequeñas */
+@media (max-width: 992px) {
+  .nosotros-card {
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 40px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .nosotros-texto {
+    flex-basis: auto;
+    font-size: 1rem;
+  }
+
+  .evolucion {
+    font-size: 2rem;
+    top: 10px;
+  }
+
+  .recursos-right h2 {
+    font-size: 2rem;
+  }
+
+  .titulo-hoy {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
-    .lo-que-nos-hace-diferentes {
-        flex-direction: column;
-        padding: 40px 20px;
-    }
+  .nosotros-card {
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
 
-    .imagen-left {
-        margin-right: 0;
-        margin-bottom: 20px; /* Espacio debajo de la imagen en pantallas pequeñas */
-    }
+  .nosotros-card img {
+    max-width: 90%;
+    height: auto;
+  }
 
-    .recursos-right {
-        flex: 1;
-        grid-template-columns: 1fr; /* Solo una columna en pantallas pequeñas */
-    }
+  .nosotros-texto {
+    font-size: 1rem;
+  }
 
-    .recurso {
-        flex-direction: row; /* Dispone los íconos y el texto en línea */
-        text-align: left;
-    }
+  .video-fondo-container {
+    height: 70vh;
+  }
 
-    .recurso .icono {
-        margin-right: 20px;
-    }
+  .evolucion {
+    font-size: 1.8rem;
+  }
 
-    .recurso .descripcion h3 {
-        font-size: 1.3rem;
-    }
+  .nuestro-hoy video {
+    max-width: 100%;
+    margin: 20px auto;
+  }
 
-    .recurso .descripcion p {
-        font-size: 0.9rem;
-    }
+  .titulo-hoy {
+    font-size: 1.8rem;
+    padding: 8px 16px;
+  }
+
+  .recurso {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .recurso .icono {
+    margin: 0 0 10px 0;
+  }
+
+  .recurso .descripcion h3 {
+    font-size: 1.2rem;
+  }
+
+  .recurso .descripcion p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nosotros-card {
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .evolucion {
+    font-size: 1.5rem;
+    top: 8px;
+    padding: 0 10px;
+  }
+
+  .titulo-hoy {
+    font-size: 1.6rem;
+    margin: 20px auto;
+  }
+
+  .recursos-right h2 {
+    font-size: 1.8rem;
+  }
+
+  .recurso .descripcion h3 {
+    font-size: 1.1rem;
+  }
+
+  .recurso .descripcion p {
+    font-size: 0.85rem;
+  }
+
+  .lo-que-nos-hace-diferentes {
+    padding: 30px 15px;
+  }
 }

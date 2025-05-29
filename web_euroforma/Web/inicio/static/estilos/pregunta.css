@@ -190,3 +190,71 @@ a:hover {
   opacity: 0;
   transform: translateY(40px);
 }
+@media (max-width: 992px) {
+  .faq-wrapper {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .faq-nav {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    position: static;
+    box-shadow: none;
+    padding: 10px;
+  }
+
+  .faq-nav button {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .faq-info {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .faq-title {
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .faq-title::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-title {
+    font-size: 1.8rem;
+    padding: 15px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .faq-section p,
+  .faq-category li {
+    font-size: 0.95rem;
+  }
+
+  .faq-nav button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .see-more {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+}
