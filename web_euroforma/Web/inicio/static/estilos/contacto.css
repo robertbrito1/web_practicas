@@ -1,12 +1,5 @@
-/* Fondo general */
-/* Fondo general con margen interno */
-.fondo-azul {
-  background-color: #e6f0ff;
-  min-height: 100vh;
-  padding: 60px 20px; /* Aumenté el padding para más espacio */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-sizing: border-box;
-}
+
+
 
 /* Contenedor del formulario con margen externo */
 .contenedorformulario {
