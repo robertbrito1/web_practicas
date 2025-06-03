@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body_class %}fondo-azul{% endblock %}
+{% block content %}
+
+<div class="patrocinios-con-imagen">
+  <img src="{% static 'imagenes/r.jpg' %}" alt="Imagen de fondo" class="imagen-fondo">
+  <h1 class="texto-superpuesto">PATROCINIOS Y RESPONSABILIDAD SOCIAL Y CORPORATIVA</h1>
+</div>
+
+
+
+<h2 class="faq-title">Compremetido con nuestro entorno </h2>
+
+<div class="img-op">
+  <img src="{% static 'imagenes/o.png' %}" alt="Imagen 1" class="img-normal">
+
+  <div class="imagen-hover">
+    <img src="{% static 'imagenes/rsc.jpg' %}" alt="Imagen 2" class="img-hover">
+    <div class="mensaje-hover">
+      <p>FP Euroformac se une al Banco de Alimentos de Madrid realizando la recogida de alimentos no perecederos en Nuestro Centro Tecnológico de Ciudad Universitaria
+        ( Avenida de Pablo Iglesias 53).</p>
+    </div>
+  </div>
+</div>
+<h2 class="faq-title">Vocacion de permanencia</h2>
+
+<div class="img-op2">
+  <img src="{% static 'imagenes/e.jpg' %}" alt="Imagen extra" class="img-extra2">
+  <div class="imagen-hover2">
+    <img src="{% static 'imagenes/cd.png' %}" alt="Imagen 2" class="img-hover2">
+    
+    <div class="mensaje-hover2">
+      <p>
+        En FP Euroformac creemos y promovemos el deporte como parte fundamental de la vida de nuestros alumnos y, 
+        por ello, patrocinamos varios equipos de este Club situado muy cerca de nuestro Centro Tecnológico.
+      </p>
+      
+    </div>
+  </div>
+</div>
+
+{% endblock %}

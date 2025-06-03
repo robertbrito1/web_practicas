@@ -28,6 +28,7 @@ urlpatterns = [
     path('politicas/', include('inicio.urls')),
     path('avisos/', include('inicio.urls')),
     path('cockies/', include('inicio.urls')),
+    path('rsc/', include('inicio.urls')),
     path('', include('inicio.urls')),           # Página de inicio
 ]
 
