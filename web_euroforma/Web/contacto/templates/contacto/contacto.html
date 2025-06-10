@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="{% static 'contacto/contacto.css' %}">
 
 <div class="contenedor-flex">
+
   <!-- FORMULARIO -->
   <div class="contenedorformulario">
     <h2>CONTACTO</h2>
@@ -23,17 +24,15 @@
       <div style="text-align: left; margin: 10px 20px;">
         <label style="font-size: 14px;">
           <input type="checkbox" id="privacidad" required>
-          Acepto las <a href="{% url 'politicas' %}" target="_blank">Politica de Privacidad</a>.
+          Acepto las <a href="{% url 'politicas' %}" target="_blank">Política de Privacidad</a>.
         </label>
       </div>
 
       <input type="submit" value="Enviar" class="btn btn-success btn-lg">
     </form>
   </div>
-</div>
 
-
-  <!-- MAPA -->
+  <!-- MAPA (colócalo dentro del contenedor-flex) -->
   <div class="contenedor-mapa">
     <img src="{% static 'imagenes/mapa.png' %}" alt="Mapa global" class="img-mapa">
   </div>
