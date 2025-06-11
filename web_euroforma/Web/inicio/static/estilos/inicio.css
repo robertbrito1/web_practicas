@@ -185,6 +185,42 @@
   object-fit: contain;
   max-width: 100%;
 }
+/* diseño ia*/
+.chatgpt-widget {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.chat-box {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+}
+
+.chat-box p {
+  margin: 5px 0;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
 @media (max-width: 768px) {
   .faq-grid {
     grid-template-columns: 1fr;
