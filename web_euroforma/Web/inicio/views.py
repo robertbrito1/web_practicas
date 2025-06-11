@@ -28,5 +28,7 @@ def avisos(request):
 def cockies(request):
     return render(request, 'cockies.html')
 
-def instalaciones(request):
-    return render(request, 'instalaciones.html')
+
+
+def rsc(request):
+    return render(request, 'rsc.html')

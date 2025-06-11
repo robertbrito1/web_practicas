@@ -18,3 +18,18 @@
     opacity: 1;
     transform: translateY(0); /* Desplaza el elemento hacia su posición original */
 }
+@media (max-width: 768px) {
+  .google-reviews {
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .google-reviews {
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 4px;
+  }
+}

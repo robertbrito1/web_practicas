@@ -12,8 +12,9 @@ urlpatterns = [
     path('politicas', views.politicas, name='politicas'), 
     path('avisos', views.avisos, name='avisos'), 
     path('cockies', views.cockies, name='cockies'), 
+    path('rsc', views.rsc, name='rsc'), 
     path('', views.inicio, name='inicio'),
-    path('instalaciones/', views.instalaciones, name='instalaciones'),
+    
     
     
 ]

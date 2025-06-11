@@ -1,108 +1,168 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
 
 /* Contenedor general */
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Estilo para el header */
 header {
-    background-color: #00509E; /* Azul más oscuro para el header */
-    padding: 40px 0;
-    text-align: center;
+  background-color: #00509E;
+  padding: 40px 0;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 header p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
 header .btn-primary {
-    background-color: #FFD700; /* Botón de color dorado */
-    color: #003366; /* Texto azul oscuro */
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  background-color: #FFD700;
+  color: #003366;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 header .btn-primary:hover {
-    background-color: #E5C100; /* Cambio de color al pasar el ratón */
+  background-color: #E5C100;
 }
 
 /* Estilos para la sección de cursos */
 .courses {
-    background-color: #004C8C; /* Azul más oscuro para la sección de cursos */
-    padding: 40px 0;
-    text-align: center;
+  background-color: #004C8C;
+  padding: 40px 0;
+  text-align: center;
+  color: #fff;
 }
 
 .courses h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
+  font-size: 2.5em;
+  margin-bottom: 40px;
 }
 
 .course-item {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .course-item h3 {
-    font-size: 2em;
-    margin-bottom: 10px;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .course-item p {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
-
-
 
 /* Botón flotante */
 .floating-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #FFD700;
-    color: #003366;
-    padding: 12px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: background-color 0.3s;
-    z-index: 1000;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #FFD700;
+  color: #003366;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+  z-index: 1000;
 }
 
 .floating-button:hover {
-    background-color: #e5c100;
+  background-color: #e5c100;
 }
 
-/* === INICIO - Fondo estático de la web === */
-body.fondo-azul {
-    background-color: #001d3d !important;
-    background-image: none !important;
+/* Fondo estático */
+body.fondo-azul,
+body.cookies {
+  background-color: #001d3d !important;
+  background-image: none !important;
 }
 
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
 
+  header {
+    padding: 30px 10px;
+  }
 
-  
+  header h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+  }
 
-  body.cookies {
-    background-color: #001d3d !important; /* azul oscuro */
-    background-image: none !important;
+  header p {
+    font-size: 1em;
+    margin-bottom: 25px;
+  }
+
+  header .btn-primary {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+
+  .courses h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  .course-item h3 {
+    font-size: 1.5em;
+  }
+
+  .course-item p {
+    font-size: 1em;
+  }
+
+  .floating-button {
+    padding: 10px 18px;
+    font-size: 0.9em;
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .courses h2 {
+    font-size: 1.6em;
+  }
+
+  .course-item h3 {
+    font-size: 1.3em;
+  }
+
+  .course-item p {
+    font-size: 0.95em;
+  }
+
+  .floating-button {
+    font-size: 0.85em;
+    padding: 10px 16px;
+  }
+}

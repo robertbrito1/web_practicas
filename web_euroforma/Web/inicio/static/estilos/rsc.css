@@ -1,0 +1,159 @@
+.patrocinios-con-imagen {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.imagen-fondo {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(50%); /* oscurece la imagen para mejor legibilidad del texto */
+}
+
+.texto-superpuesto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gold;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/*operaciones*/ 
+.img-op {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-normal {
+  width: 300px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.imagen-hover {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.img-hover {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+/* Este es el nuevo apartado oculto debajo de la imagen */
+.mensaje-hover {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* Hover: baja la imagen y muestra el apartado */
+.imagen-hover:hover .img-hover {
+  transform: translateY(10px);
+}
+
+.imagen-hover:hover .mensaje-hover {
+  max-height: 200px; /* ajusta según contenido */
+  padding: 10px;
+}
+
+/* vocacion  */
+.img-op2 {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 80px; /* más espacio antes del footer */
+  min-height: 400px;   /* asegura que no colapse si el contenido está oculto */
+  position: relative;
+  z-index: 1;
+}
+
+.img-normal2 {
+  width: 300px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.imagen-hover2 {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.img-hover2 {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.mensaje-hover2 {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.img-extra2 {
+  width: 300px;         /* o cualquier tamaño deseado */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.imagen-hover2:hover .img-hover2 {
+  transform: translateY(10px);
+}
+
+.imagen-hover2:hover .mensaje-hover2 {
+  max-height: 300px;
+  padding: 10px;
+}

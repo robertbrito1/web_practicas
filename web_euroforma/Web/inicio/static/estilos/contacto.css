@@ -1,72 +1,230 @@
+
+
+
+/* Contenedor del formulario con margen externo */
 .contenedorformulario {
-    background-color: rgb(209, 184, 40); /* Fondo dorado */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el contenedor */
-    max-width: 600px;
-    margin: 40px auto;
-    color: rgb(23, 78, 180);
+  flex: 1 1 500px;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+/* Título del formulario (si se incluye) */
+.contenedorformulario h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #333;
 }
 
+/* Tabla del formulario */
 .contenedorformulario table {
-    width: 100%;
-    color:rgb(23, 78, 180);
+  width: 100%;
 }
 
-.contenedorformulario input[type="submit"] {
-    background-color: #11558d; /* Color del botón */
-    color: rgb(255, 248, 248); /* Color del texto */
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 20px; /* Tamaño de la fuente más grande */
-    padding: 15px 30px; /* Más espacio interno */
-    border-radius: 8px; /* Bordes redondeados */
-    width: 200px; /* Ancho del botón */
-};
-
-
-.contenedorformulario input[type="submit"]:hover {
-    background-color: #e6b800; /* Color más oscuro al pasar el mouse */
+.contenedorformulario table tr {
+  margin-bottom: 15px;
 }
 
+.contenedorformulario table td {
+  padding: 10px 0;
+}
+
+/* Inputs y Textareas */
+.contenedorformulario input[type="text"],
+.contenedorformulario input[type="email"],
+.contenedorformulario textarea,
+.contenedorformulario select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.contenedorformulario input:focus,
+.contenedorformulario textarea:focus,
+.contenedorformulario select:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+/* Botón de envío */
+input[type="submit"].btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"].btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+/* Alertas */
 .alert {
-    background-color: #fff8dc; /* Fondo claro para el mensaje */
-    color: #000000;
-    border: 1px solid #ffeeba;
-    border-radius: 5px;
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
 }
-.map-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.map-item {
-    flex: 1 1 45%; /* Permite que cada mapa tenga un 45% de ancho */
-    min-width: 300px;
+.contenedor-mapa {
+  flex: 1 1 400px;
+  max-width: 550px;
+  padding: 20px;
 }
 
-.map-wrapper {
-    position: relative;
+/* Imagen del mapa */
+.img-mapa {
+  width: 120%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.contenedor-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 20px;
+  flex-wrap: nowrap; /* <-- cambia de wrap a nowrap */
+  overflow-x: auto; 
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .contenedorformulario {
+    padding: 25px 20px;
+  }
+
+  input[type="submit"].btn {
     width: 100%;
-    height: 250px;
-    margin-top: 1rem;
+  }
 }
 
-.map-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
+/* Acordeón general */
+.accordion-row {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
-.map-iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    pointer-events: none;
+/* Ítems del acordeón */
+.accordion-item {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Cabecera del acordeón */
+.accordion-button {
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  padding: 15px 20px;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button.collapsed {
+  background-color: #6c757d;
+}
+
+.accordion-button:hover {
+  background-color: #0056b3;
+}
+
+/* Cuerpo del acordeón */
+.accordion-body {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Lista de direcciones */
+.accordion-body ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.accordion-body ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.accordion-body ul li::before {
+  content: "📍";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Mapas responsivos */
+.accordion-body iframe {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedorformulario {
+    padding: 20px;
+  }
+
+  .accordion-button {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+
+  .accordion-body ul li {
+    font-size: 15px;
+  }
+
+  .accordion-body iframe {
+    height: 180px;
+  }
+}
+.titulo-sedes {
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(to right, #00aaff, #ffffff);
+  color: #003366; /* Azul oscuro */
+  position: relative;
+  margin-bottom: 40px;
+  padding: 20px; /* Opcional: para que el fondo se note mejor */
+}
+
+/* Línea dorada decorativa debajo del título */
+.titulo-sedes::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #d4af37; /* dorado */
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+  
 }
