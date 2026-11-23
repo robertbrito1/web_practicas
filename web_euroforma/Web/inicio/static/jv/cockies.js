@@ -10,14 +10,14 @@
 (function () {
     "use strict";
 
-    var COOKIE_NAME = "cookie_consent";
-    var MAX_AGE = 60 * 60 * 24 * 365; // 1 año
+    let COOKIE_NAME = "cookie_consent";
+    let MAX_AGE = 60 * 60 * 24 * 365; // 1 año
 
     function readConsent() {
-        var match = document.cookie.match(new RegExp("(?:^|; )" + COOKIE_NAME + "=([^;]*)"));
+        let match = document.cookie.match(new RegExp("(?:^|; )" + COOKIE_NAME + "=([^;]*)"));
         if (!match) return null;
         try {
-            var value = JSON.parse(decodeURIComponent(match[1]));
+            let value = JSON.parse(decodeURIComponent(match[1]));
             return value && value.v === 1 ? value : null;
         } catch (e) {
             return null;
@@ -25,8 +25,8 @@
     }
 
     function saveConsent(thirdParty) {
-        var value = encodeURIComponent(JSON.stringify({ v: 1, third: thirdParty, ts: Date.now() }));
-        var secure = location.protocol === "https:" ? "; Secure" : "";
+        let value = encodeURIComponent(JSON.stringify({ v: 1, third: thirdParty, ts: Date.now() }));
+        let secure = location.protocol === "https:" ? "; Secure" : "";
         document.cookie = COOKIE_NAME + "=" + value + "; Max-Age=" + MAX_AGE + "; Path=/; SameSite=Lax" + secure;
     }
 
@@ -35,7 +35,7 @@
     }
 
     function removePlaceholder(iframe) {
-        var prev = iframe.previousElementSibling;
+        let prev = iframe.previousElementSibling;
         if (prev && prev.classList.contains("embed-placeholder")) prev.remove();
     }
 
@@ -51,19 +51,19 @@
     // Rechaza o aún no decidió: oculta el iframe y muestra un aviso en su lugar.
     function blockEmbeds(onAccept) {
         embeds().forEach(function (iframe) {
-            var prev = iframe.previousElementSibling;
+            let prev = iframe.previousElementSibling;
             if (prev && prev.classList.contains("embed-placeholder")) return;
 
-            var service = iframe.dataset.consentService || "terceros";
-            var cover = window.getComputedStyle(iframe).position === "absolute";
+            let service = iframe.dataset.consentService || "terceros";
+            let cover = window.getComputedStyle(iframe).position === "absolute";
 
-            var box = document.createElement("div");
+            let box = document.createElement("div");
             box.className = "embed-placeholder" + (cover ? " embed-placeholder--cover" : "");
 
-            var text = document.createElement("p");
+            let text = document.createElement("p");
             text.textContent = "Para ver este contenido de " + service + " necesitas aceptar las cookies de terceros.";
 
-            var button = document.createElement("button");
+            let button = document.createElement("button");
             button.type = "button";
             button.className = "btn btn-warning btn-sm";
             button.textContent = "Aceptar cookies";
@@ -77,10 +77,10 @@
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-        var banner = document.getElementById("cookie-banner");
-        var acceptBtn = document.getElementById("accept-cookies");
-        var rejectBtn = document.getElementById("reject-cookies");
-        var settingsLink = document.getElementById("cookie-settings");
+        let banner = document.getElementById("cookie-banner");
+        let acceptBtn = document.getElementById("accept-cookies");
+        let rejectBtn = document.getElementById("reject-cookies");
+        let settingsLink = document.getElementById("cookie-settings");
 
         // Limpia la clave antigua (el banner anterior usaba localStorage).
         try { localStorage.removeItem("cookieConsent"); } catch (e) { /* sin acceso */ }
@@ -92,7 +92,7 @@
         }
 
         function reject() {
-            var before = readConsent();
+            let before = readConsent();
             saveConsent(false);
             banner.hidden = true;
             // Si ya había aceptado, hay iframes cargados: se recarga para descargarlos.
@@ -114,7 +114,7 @@
             });
         }
 
-        var consent = readConsent();
+        let consent = readConsent();
         if (!consent) banner.hidden = false;
 
         if (consent && consent.third) {
