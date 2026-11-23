@@ -16,6 +16,15 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Carga variables desde .env (si existe) sin necesitar librerías extra.
+_env_file = BASE_DIR.parent.parent / ".env"
+if _env_file.exists():
+    for _line in _env_file.read_text(encoding="utf-8").splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _v = _line.split("=", 1)
+            os.environ.setdefault(_k.strip(), _v.strip().strip('"').strip("'"))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -140,8 +149,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # ✅ Correcto
 EMAIL_HOST="smtp.gmail.com"
 EMAIL_USE_TLS=True                                 # configuracion para el envio de correo a mi cuenta de gmail
 EMAIL_PORT=587
-EMAIL_HOST_USER="britocanha@gmail.com"
-EMAIL_HOST_PASSWORD="gvactwzrylvknjjm"
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
 EMAIL_USE_TLS = True
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
