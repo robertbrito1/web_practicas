@@ -1,0 +1,10 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Python compilado
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
