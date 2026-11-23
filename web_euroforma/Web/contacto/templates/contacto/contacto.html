@@ -15,17 +15,30 @@
     </p>
     {% endif %}
 
+    {% if "limite" in request.GET %}
+    <p class="alert alert-warning text-center" role="alert">
+      Has enviado demasiados mensajes seguidos. Inténtalo de nuevo en unos minutos.
+    </p>
+    {% endif %}
+
+    {% if "error" in request.GET %}
+    <p class="alert alert-danger text-center" role="alert">
+      No hemos podido enviar tu mensaje. Inténtalo más tarde o escríbenos a info@grupoeuroformac.com.
+    </p>
+    {% endif %}
+
+    {% if miformulario.errors %}
+    <div class="alert alert-danger" role="alert">
+      <ul class="mb-0">
+        {% for campo in miformulario %}{% for error in campo.errors %}<li>{{ error }}</li>{% endfor %}{% endfor %}
+        {% for error in miformulario.non_field_errors %}<li>{{ error }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
     <form action="" method="POST" style="text-align: center;">
       {% csrf_token %}
       <table style="margin: 20px auto;">{{ miformulario.as_table }}</table>
-
-      <!-- Checkbox de condiciones -->
-      <div style="text-align: left; margin: 10px 20px;">
-        <label style="font-size: 14px;">
-          <input type="checkbox" id="privacidad" required>
-          Acepto las <a href="{% url 'politicas' %}" target="_blank">Política de Privacidad</a>.
-        </label>
-      </div>
 
       <input type="submit" value="Enviar" class="btn btn-success btn-lg">
     </form>

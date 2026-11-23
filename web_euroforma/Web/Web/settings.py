@@ -141,6 +141,18 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
+EMAIL_TIMEOUT = 10  # segundos: evita que un fallo de SMTP deje colgada la petición
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER or "webmaster@localhost"
+
+# Quién recibe los mensajes del formulario de contacto (por defecto, la cuenta que envía).
+CONTACT_RECIPIENT = os.environ.get("CONTACT_RECIPIENT") or EMAIL_HOST_USER or "webmaster@localhost"
+
+# Sin credenciales (p. ej. recién clonado) los correos se imprimen en la terminal.
+if not EMAIL_HOST_USER:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Las peticiones no necesitan subir archivos: se limita el tamaño del cuerpo (100 KB).
+DATA_UPLOAD_MAX_MEMORY_SIZE = 100 * 1024
 
 
 # --- Crispy forms -----------------------------------------------------------------
