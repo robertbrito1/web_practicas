@@ -20,6 +20,20 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra en el logo */
 }
 
+/* Logo del menú: se adapta al ancho disponible sin desbordar */
+.navbar .logo {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+.logo-img {
+    display: block;
+    height: 80px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
 .menu {
     list-style: none;
     display: flex;

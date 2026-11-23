@@ -60,7 +60,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   color: #333;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-height: 450px;
+  min-height: 420px; /* antes height fijo: cortaba contenido largo */
+  vertical-align: top;
 }
 
 .equipo-container .profesor-card:hover {
@@ -85,4 +86,33 @@ height: 450px;
 
 .info-profesor p {
   margin: 0.4rem 0;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .detalle-profesor {
+    margin: 30px 15px;
+    padding: 25px 20px;
+  }
+
+  .detalle-profesor h2 {
+    font-size: 1.6rem;
+  }
+
+  .detalle-profesor p {
+    font-size: 1rem;
+  }
+
+  .equipo-container {
+    padding: 40px 10px;
+  }
+
+  .equipo-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .equipo-container .profesor-card {
+    width: calc(100% - 30px);
+    max-width: 340px;
+  }
 }

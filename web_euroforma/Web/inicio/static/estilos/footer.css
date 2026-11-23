@@ -110,6 +110,7 @@
   }
 
   .footer-column {
+    flex: 0 0 auto; /* en columna, flex-basis sería la altura (antes 220px) */
     width: 100%;
     margin-bottom: 20px;
   }
