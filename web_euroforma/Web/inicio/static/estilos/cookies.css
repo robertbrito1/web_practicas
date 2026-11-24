@@ -84,3 +84,65 @@
   border-radius: 0;
   z-index: 1;
 }
+
+/* Nunca más alto que la pantalla; si no cabe, hace scroll dentro del banner */
+.cookie-banner {
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+}
+
+/* Contenido de terceros bloqueado mientras no hay consentimiento (scripts) */
+.consent-pending > :not(.embed-placeholder) {
+  display: none !important;
+}
+
+/* Móviles estrechos o pantallas bajas: banner más compacto */
+@media (max-width: 400px), (max-height: 500px) {
+  .cookie-banner {
+    padding: 0.75rem 1rem;
+    bottom: 8px;
+  }
+
+  .cookie-banner h2 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .cookie-banner p {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    margin-bottom: 0.6rem;
+  }
+
+  .cookie-actions .btn {
+    min-width: 110px;
+  }
+}
+
+/* Móvil apaisado: texto y botones en la misma fila para ocupar poca altura */
+@media (max-height: 500px) and (min-width: 560px) {
+  .cookie-banner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 760px;
+    text-align: left;
+  }
+
+  .cookie-banner[hidden] {
+    display: none;
+  }
+
+  .cookie-banner h2 {
+    display: none;
+  }
+
+  .cookie-banner p {
+    margin: 0;
+  }
+
+  .cookie-actions {
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+}

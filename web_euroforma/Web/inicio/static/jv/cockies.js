@@ -2,8 +2,10 @@
  * Gestión de consentimiento de cookies.
  *
  * - La elección se guarda en una cookie propia "cookie_consent" (1 año).
- * - Los contenidos de terceros (YouTube, Google Maps) NO se cargan hasta que
- *   el usuario acepta: en las plantillas llevan data-consent-src en lugar de src.
+ * - Los contenidos de terceros NO se cargan hasta que el usuario acepta:
+ *     · iframes (YouTube, Google Maps): llevan data-consent-src en lugar de src.
+ *     · scripts (Elfsight, reseñas de Google): el contenedor lleva
+ *       data-consent-script y el script se añade solo tras aceptar.
  * - Si rechaza, en su lugar se muestra un aviso con un botón para aceptar.
  * - El enlace "Configurar cookies" (#cookie-settings) reabre el banner.
  */
@@ -30,49 +32,86 @@
         document.cookie = COOKIE_NAME + "=" + value + "; Max-Age=" + MAX_AGE + "; Path=/; SameSite=Lax" + secure;
     }
 
-    function embeds() {
-        return Array.prototype.slice.call(document.querySelectorAll("iframe[data-consent-src]"));
+    function all(selector) {
+        return Array.prototype.slice.call(document.querySelectorAll(selector));
     }
 
-    function removePlaceholder(iframe) {
+    // Aviso que sustituye al contenido de terceros mientras no haya consentimiento.
+    function makePlaceholder(service, cover, onAccept) {
+        let box = document.createElement("div");
+        box.className = "embed-placeholder" + (cover ? " embed-placeholder--cover" : "");
+
+        let text = document.createElement("p");
+        text.textContent = "Para ver este contenido de " + service + " necesitas aceptar las cookies de terceros.";
+
+        let button = document.createElement("button");
+        button.type = "button";
+        button.className = "btn btn-warning btn-sm";
+        button.textContent = "Aceptar cookies";
+        button.addEventListener("click", onAccept);
+
+        box.appendChild(text);
+        box.appendChild(button);
+        return box;
+    }
+
+    // ---- iframes -----------------------------------------------------------
+
+    function removePlaceholderBefore(iframe) {
         let prev = iframe.previousElementSibling;
         if (prev && prev.classList.contains("embed-placeholder")) prev.remove();
     }
 
-    // Acepta: carga los contenidos de terceros.
     function loadEmbeds() {
-        embeds().forEach(function (iframe) {
-            removePlaceholder(iframe);
+        all("iframe[data-consent-src]").forEach(function (iframe) {
+            removePlaceholderBefore(iframe);
             iframe.classList.remove("consent-blocked");
             if (!iframe.getAttribute("src")) iframe.setAttribute("src", iframe.dataset.consentSrc);
         });
     }
 
-    // Rechaza o aún no decidió: oculta el iframe y muestra un aviso en su lugar.
     function blockEmbeds(onAccept) {
-        embeds().forEach(function (iframe) {
+        all("iframe[data-consent-src]").forEach(function (iframe) {
             let prev = iframe.previousElementSibling;
             if (prev && prev.classList.contains("embed-placeholder")) return;
 
-            let service = iframe.dataset.consentService || "terceros";
             let cover = window.getComputedStyle(iframe).position === "absolute";
-
-            let box = document.createElement("div");
-            box.className = "embed-placeholder" + (cover ? " embed-placeholder--cover" : "");
-
-            let text = document.createElement("p");
-            text.textContent = "Para ver este contenido de " + service + " necesitas aceptar las cookies de terceros.";
-
-            let button = document.createElement("button");
-            button.type = "button";
-            button.className = "btn btn-warning btn-sm";
-            button.textContent = "Aceptar cookies";
-            button.addEventListener("click", onAccept);
-
-            box.appendChild(text);
-            box.appendChild(button);
             iframe.classList.add("consent-blocked");
-            iframe.parentNode.insertBefore(box, iframe);
+            iframe.parentNode.insertBefore(
+                makePlaceholder(iframe.dataset.consentService || "terceros", cover, onAccept),
+                iframe
+            );
+        });
+    }
+
+    // ---- scripts de terceros (p. ej. Elfsight) ------------------------------
+
+    function loadScripts() {
+        all("[data-consent-script]").forEach(function (box) {
+            let old = box.querySelector(".embed-placeholder");
+            if (old) old.remove();
+            box.classList.remove("consent-pending");
+            box.classList.add("consent-loaded");
+
+            if (box.dataset.scriptLoaded) return;
+            box.dataset.scriptLoaded = "1";
+
+            let script = document.createElement("script");
+            script.src = box.dataset.consentScript;
+            script.async = true;
+            document.body.appendChild(script);
+        });
+    }
+
+    function blockScripts(onAccept) {
+        all("[data-consent-script]").forEach(function (box) {
+            if (box.querySelector(".embed-placeholder")) return;
+            box.classList.remove("consent-loaded");
+            box.classList.add("consent-pending");
+            box.insertBefore(
+                makePlaceholder(box.dataset.consentService || "terceros", false, onAccept),
+                box.firstChild
+            );
         });
     }
 
@@ -89,17 +128,19 @@
             saveConsent(true);
             banner.hidden = true;
             loadEmbeds();
+            loadScripts();
         }
 
         function reject() {
             let before = readConsent();
             saveConsent(false);
             banner.hidden = true;
-            // Si ya había aceptado, hay iframes cargados: se recarga para descargarlos.
+            // Si ya había aceptado, hay contenido de terceros cargado: se recarga para descargarlo.
             if (before && before.third) {
                 location.reload();
             } else {
                 blockEmbeds(accept);
+                blockScripts(accept);
             }
         }
 
@@ -119,8 +160,10 @@
 
         if (consent && consent.third) {
             loadEmbeds();
+            loadScripts();
         } else {
             blockEmbeds(accept);
+            blockScripts(accept);
         }
     });
 })();

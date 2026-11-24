@@ -33,3 +33,14 @@
     border-radius: 4px;
   }
 }
+
+/* Hueco reservado para el widget de reseñas una vez cargado: evita el salto de contenido */
+.google-reviews.consent-loaded {
+    min-height: 720px;
+}
+
+@media (min-width: 769px) {
+    .google-reviews.consent-loaded {
+        min-height: 540px;
+    }
+}

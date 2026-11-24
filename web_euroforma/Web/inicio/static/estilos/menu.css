@@ -69,13 +69,27 @@
     .menu {
         display: none;
         flex-direction: column;
+        gap: 0;
         position: absolute;
-        top: 60px;
+        top: calc(100% + 4px); /* debajo de la barra: antes tapaba el logo */
         right: 20px;
         background-color: #00509E;
         width: 200px;
-        padding: 10px;
+        padding: 6px;
         border-radius: 5px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        z-index: 20;
+    }
+
+    /* Con el menú abierto, la cabecera pasa por encima del botón flotante "Contáctanos" (z-index 1000) */
+    .header-container:has(#menu-toggle:checked) {
+        z-index: 1050;
+    }
+
+    /* Enlaces con zona táctil de al menos 44px */
+    .menu li a {
+        display: block;
+        padding: 12px 10px;
     }
 
     #menu-toggle:checked + .menu-icon + .logo + .menu {
@@ -84,13 +98,15 @@
 
     .menu-icon {
         display: block;
+        padding: 6px 10px;
+        line-height: 1;
     }
 }
 
 /* Estilo para el video de fondo */
 .header-container {
     position: relative;
-    z-index: 1; /* Asegura que el contenido esté encima del video */
+    z-index: 20; /* por encima de las secciones siguientes: el menú desplegable cae sobre ellas */
 }
 
 .video-background {
@@ -177,10 +193,10 @@ header .btn-primary:hover {
   }
 
   .menu {
-    top: 50px;
+    top: calc(100% + 4px); /* debajo de la barra, no sobre el logo */
     right: 10px;
     width: 180px;
-    padding: 8px;
+    padding: 6px;
   }
 
   .menu li a {

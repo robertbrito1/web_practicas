@@ -51,7 +51,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://127.0.0.1:8000',
 ]
 
-X_FRAME_OPTIONS = 'ALLOWALL'
+# Solo esta misma web puede incrustar sus páginas en un iframe (evita clickjacking).
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 # --- Aplicaciones ---------------------------------------------------------------
