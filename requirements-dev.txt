@@ -1,0 +1,4 @@
+# Dependencias solo para desarrollo (pruebas E2E en navegador real).
+# Instalación: pip install -r requirements-dev.txt && playwright install chromium
+-r requirements.txt
+playwright>=1.40
