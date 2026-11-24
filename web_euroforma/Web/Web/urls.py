@@ -22,6 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contacto/', include('contacto.urls')),  # Rutas de la app "contacto"
+    path('api/chat/', include('chat.urls')),       # Asistente del chat
     path('nosotros/', include('inicio.urls')),
     path('equipo/', include('inicio.urls')), 
     path('preguntas/', include('inicio.urls')),   # Rutas de la app "inicio"

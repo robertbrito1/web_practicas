@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.shortcuts import render
+from chat import faq
 from .models import Profesor
 from django.shortcuts import get_object_or_404
 
 
 def inicio(request):
-    return render(request, 'inicio.html')
+    # Los botones del chat salen del FAQ: una sola fuente de verdad.
+    return render(request, 'inicio.html', {'sugerencias': faq.SUGERENCIAS_INICIALES})
 
 def equipo(request):
     profesores = Profesor.objects.all()

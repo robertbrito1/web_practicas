@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'Web',
     'inicio',
     'contacto',
+    'chat',
 ]
 
 MIDDLEWARE = [
@@ -159,3 +160,11 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 100 * 1024
 # --- Crispy forms -----------------------------------------------------------------
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# --- Asistente del chat ---------------------------------------------------------
+# El chat responde con preguntas frecuentes (gratis). La IA es OPCIONAL y viene APAGADA:
+# para activarla pon en el .env  CHAT_IA_ENABLED=True  y  ANTHROPIC_API_KEY=<tu clave>.
+CHAT_IA_ENABLED = _env_bool("CHAT_IA_ENABLED", False)
+CHAT_IA_MODEL = os.environ.get("CHAT_IA_MODEL", "claude-haiku-5-5")
+CHAT_IA_MAX_TOKENS = int(os.environ.get("CHAT_IA_MAX_TOKENS", "400"))

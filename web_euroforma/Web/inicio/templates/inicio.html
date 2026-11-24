@@ -177,11 +177,19 @@
     </div>
   </div>
 </section>
-<section class="chatgpt-widget">
-  <h2>Habla con nuestro Asistente IA</h2>
-  <div id="chat-box" class="chat-box"></div>
-  <input type="text" id="user-input" placeholder="Escribe tu pregunta..." />
-  <button onclick="sendMessage()">Enviar</button>
+<section class="chat-widget" id="chat-widget" aria-labelledby="chat-titulo">
+  <h2 id="chat-titulo">Habla con nuestro Asistente</h2>
+  <p class="chat-aviso">Asistente virtual automático. No escribas datos personales.</p>
+  {% csrf_token %}
+  <div id="chat-box" class="chat-box" role="log" aria-live="polite" aria-label="Conversación con el asistente"></div>
+  <div id="chat-sugerencias" class="chat-sugerencias" aria-label="Preguntas sugeridas">
+    {% for sugerencia in sugerencias %}<button type="button" class="chat-chip">{{ sugerencia }}</button>
+    {% endfor %}
+  </div>
+  <form id="chat-form" class="chat-form" autocomplete="off">
+    <input type="text" id="user-input" maxlength="500" placeholder="Escribe tu pregunta..." aria-label="Tu pregunta">
+    <button type="submit" class="chat-enviar">Enviar</button>
+  </form>
 </section>
 
 
